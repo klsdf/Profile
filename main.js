@@ -222,4 +222,16 @@ $(document).ready(function () {
             $(this).find('img').show();
         }
     );
+
+    // 修改点击事件
+    $('.game-item').click(function() {
+        const index = $(this).index(); // 获取点击的游戏索引
+        const game = games[index]; // 获取对应的游戏信息
+
+        // 将游戏信息存储到 Local Storage
+        localStorage.setItem('selectedGame', JSON.stringify(game));
+
+        // 导航到详情页面
+        window.location.href = 'gameDetail.html';
+    });
 });

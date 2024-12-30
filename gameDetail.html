@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏详情</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b2838;
+            color: #c7d5e0;
+            margin: 0;
+            padding: 0;
+        }
+        .game-detail {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2a475e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .game-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        #game-img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .game-info {
+            flex: 1;
+        }
+        .game-info h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #fff;
+        }
+        .game-info p {
+            margin: 10px 0;
+        }
+        .game-video {
+            margin-top: 20px;
+        }
+        #game-video {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .game-rules {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1c3a4d;
+            border-radius: 8px;
+        }
+        .game-download {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .game-download a {
+            color: #66c0f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .game-download a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-detail">
+        <div class="game-header">
+            <img id="game-img" src="" alt="游戏截图">
+            <div class="game-info">
+                <h1 id="game-title">游戏名称</h1>
+                <p id="game-info">游戏内容</p>
+            </div>
+        </div>
+        <div class="game-video">
+            <video id="game-video" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+        <div class="game-rules" id="game-rules">游戏规则</div>
+        <div class="game-download">
+            <a id="game-link" href="#" target="_blank">点击下载游戏</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const game = JSON.parse(localStorage.getItem('selectedGame'));
+            if (game) {
+                document.getElementById('game-title').textContent = game.title;
+                document.getElementById('game-info').textContent = game.info;
+                document.getElementById('game-img').src = game.img[0];
+                document.getElementById('game-video').querySelector('source').src = game.video;
+                document.getElementById('game-rules').textContent = game.rulesInfo;
+                document.getElementById('game-link').href = game.link;
+            }
+        });
+    </script>
+</body>
+</html>
