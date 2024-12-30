@@ -1,4 +1,3 @@
-
 class Assert {
 
 }
@@ -72,7 +71,7 @@ let games = [
 
     new GameInfo("还乡", "生存类战棋+塔防的设计", ["./img/game1.png"], "", "https://pan.baidu.com/s/1g263gxC3fPlRSYfy7HcNDA?pwd=l1qm",
     `
-    本游戏的灵感来源于“围追堵截棋”和“围棋的胜率模式”
+    本游戏的灵感来源于"围追堵截棋"和"围棋的胜率模式"
 
     因为设计pvp的开发成本较高，暂时采用了pve的塔防设计。
 
@@ -168,32 +167,25 @@ $(document).ready(function () {
         console.log(games[i].tag)
         $('.game-section').append(`
         <div class="game-item">
-
             <div class="game-main-content">
                 <div class="left-area">
-                <video  width="500" height="240" controls>
-                    <source src="${games[i].video}" type="video/mp4">
-                </video>
-
-                ${games[i].img.map( (imgPath)=>`<img src="${imgPath}" alt="游戏截图">`  )}
-                
-                <div class="game-tag-bar">
-                    ${games[i].tag.map((tagText) => `<span class="game-tag">${tagText}</span>`).join(',')}
+                    <img src="${games[i].img[0]}" alt="游戏截图">
+                    <video controls>
+                        <source src="${games[i].video}" type="video/mp4">
+                    </video>
+                    <div class="game-tag-bar">
+                        ${games[i].tag.map((tagText) => `<span class="game-tag">${tagText}</span>`).join(',')}
+                    </div>
                 </div>
-
+                <div class="right-area">
+                    <div class="game-name">${games[i].title}</div>
+                    <div class="game-info">${games[i].info}</div>
+                    <div class="game-download">游戏下载链接<a target="_blank" href="${games[i].link}" >点击下载</a></div>
+                </div>
             </div>
-            <div class="right-area">
-                <div class="game-name">${games[i].title}</div>
-                <div class="game-info">${games[i].info}</div>
-                <div class="game-download">游戏下载链接<a target="_blank" href="${games[i].link}" >点击下载</a></div>
-            </div>
-            
-            </div>
-
-
             <div class="content">${games[i].rulesInfo}</div>
         </div>
-            `)
+        `)
 
     }
 
@@ -218,4 +210,16 @@ $(document).ready(function () {
         $('.music-section').show();
         $('.article-section, .game-section').hide();
     });
+
+    // 添加鼠标事件
+    $('.game-item').hover(
+        function() {
+            $(this).find('img').hide();
+            $(this).find('video').show().get(0).play();
+        },
+        function() {
+            $(this).find('video').hide().get(0).pause();
+            $(this).find('img').show();
+        }
+    );
 });
