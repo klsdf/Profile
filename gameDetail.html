@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>游戏详情</title>
+    <link rel="stylesheet" href="./main.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1b2838;
-            color: #c7d5e0;
-            margin: 0;
-            padding: 0;
-        }
         .game-detail {
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #2a475e;
+            background-color: var(--bg-color-2);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -36,7 +30,7 @@
         .game-info h1 {
             margin: 0;
             font-size: 2em;
-            color: #fff;
+            color: var(--text-color);
         }
         .game-info p {
             margin: 10px 0;
@@ -51,7 +45,7 @@
         .game-rules {
             margin-top: 20px;
             padding: 10px;
-            background-color: #1c3a4d;
+            background-color: var(--bg-color);
             border-radius: 8px;
         }
         .game-download {
@@ -64,6 +58,18 @@
             font-weight: bold;
         }
         .game-download a:hover {
+            text-decoration: underline;
+        }
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-button a {
+            color: #66c0f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-button a:hover {
             text-decoration: underline;
         }
     </style>
@@ -85,6 +91,9 @@
         <div class="game-rules" id="game-rules">游戏规则</div>
         <div class="game-download">
             <a id="game-link" href="#" target="_blank">点击下载游戏</a>
+        </div>
+        <div class="back-button">
+            <a href="index.html">返回</a>
         </div>
     </div>
     <script>

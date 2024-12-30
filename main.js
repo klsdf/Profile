@@ -3,9 +3,21 @@ class Assert {
 }
 
 
-
+/**
+ * 游戏信息
+ */
 class GameInfo {
-    constructor(title, info, img, video, link,rulesInfo, tag) {
+    /**
+     * 
+     * @param {string} title 游戏名称
+     * @param {string} info 游戏简介
+     * @param {string[]} img 游戏截图
+     * @param {string} video 游戏视频
+     * @param {string} link 游戏下载链接
+     * @param {string} rulesInfo 游戏规则
+     * @param {string[]} tag 游戏标签
+     */
+    constructor(title, info, img, video, link, rulesInfo, tag) {
         this.title = title;
         this.info = info;
         this.img = img;
@@ -52,8 +64,8 @@ class MusicInfo {
 
 let games = [
     new GameInfo(
-        "姆姆因子", 
-        "姆姆因子是一款PVE的类RTS游戏", 
+        "姆姆因子",
+        "姆姆因子是一款PVE的类RTS游戏",
         ["./img/game2.png"], "", "https://pan.baidu.com/s/19IgyKDiHFaP0Ius5re1wEQ?pwd=44pm",
         `
         1. 开局双方都拥有一个细胞
@@ -65,12 +77,12 @@ let games = [
         本游戏的设计核心是让玩家感受到快节奏的RTS游戏，感受基因混战的宏大场面。
 
         `
-        ,["RTS", "单局对抗", "细胞战争"]),
+        , ["RTS", "单局对抗", "细胞战争"]),
 
 
 
     new GameInfo("还乡", "生存类战棋+塔防的设计", ["./img/game1.png"], "", "https://pan.baidu.com/s/1g263gxC3fPlRSYfy7HcNDA?pwd=l1qm",
-    `
+        `
     本游戏的灵感来源于"围追堵截棋"和"围棋的胜率模式"
 
     因为设计pvp的开发成本较高，暂时采用了pve的塔防设计。
@@ -83,35 +95,35 @@ let games = [
     6. 只有干细胞可以分化，形成攻击细胞，防御细胞等
 
 
-    `    
-    ,["新棋", "塔防", "生存"]),
+    `
+        , ["新棋", "塔防", "生存"]),
 
-    new GameInfo("山的那边", "RPG游戏,使用RPGMV制作",[ "./img/game1.png"], "", "https://pan.baidu.com/s/19IgyKDiHFaP0Ius5re1wEQ?pwd=44pm",
-       ``, ["解密RPG", "多周目剧情"]),
+    new GameInfo("山的那边", "RPG游戏,使用RPGMV制作", ["./img/game1.png"], "", "https://pan.baidu.com/s/19IgyKDiHFaP0Ius5re1wEQ?pwd=44pm",
+        ``, ["解密RPG", "多周目剧情"]),
 
     new GameInfo("文芒", "ADV文字解密类游戏", ["./img/game1.png"], "./video/文芒.mp4", "https://pan.baidu.com/s/1w-LD3yarHCF9ZaCAoNSIcA?pwd=kg2g",
         `
         
         游戏采用了文字作为游戏的主题和主体部分
         
-        `,["文字解密RPG", "叙事向", "线性关卡"]),
+        `, ["文字解密RPG", "叙事向", "线性关卡"]),
 
     new GameInfo("迪亚特洛夫行动", "叙事向卡牌游戏", ["./img/game1.png"], "", "https://pan.baidu.com/s/1KwuZL7IZdihQBiZBtKygZQ?pwd=c6tk",
-        ``,["卡牌", "叙事向", "生存"]),
+        ``, ["卡牌", "叙事向", "生存"]),
 
     new GameInfo("奈尔效应", "空间解密游戏", ["./img/game1.png"], "", "https://pan.baidu.com/s/1rIQh3zN_RXrgZeQodHGWMQ?pwd=dkhs ",
-        ``,["空间解密", "叙事向", "手书风格"]),
+        ``, ["空间解密", "叙事向", "手书风格"]),
 
     new GameInfo("通感", "视觉和叙事创意向游戏", ["./img/game1.png"], "", "",
-        ``,["空间解密", "叙事向", "手书风格"]),
+        ``, ["空间解密", "叙事向", "手书风格"]),
 
 
-        
-    new GameInfo("免费领取JavaScript学习资料", 
-    
-    "本游戏是meta游戏", ["./img/game1.png"], "https://www.bilibili.com/video/BV1Tj411m7Mp/?spm_id_from=333.999.0.0", 
-    "",
-    `
+
+    new GameInfo("免费领取JavaScript学习资料",
+
+        "本游戏是meta游戏", ["./img/game1.png"], "https://www.bilibili.com/video/BV1Tj411m7Mp/?spm_id_from=333.999.0.0",
+        "",
+        `
     
 
     本游戏主要想突破传统游戏的媒介，把游戏和玩家关系拓展到更广的维度。
@@ -120,7 +132,9 @@ let games = [
 
     
     `,
-    ["限时人物养成", "metagame", "ARG"]),
+        ["限时人物养成", "metagame", "ARG"]),
+
+    new GameInfo("我思故我在", "游戏简介", ["./img/game1.png"], "", "", "", ["超现实主义", "实验游戏", "意识流"]),
 
 ]
 
@@ -173,17 +187,17 @@ $(document).ready(function () {
                     <video controls>
                         <source src="${games[i].video}" type="video/mp4">
                     </video>
-                    <div class="game-tag-bar">
-                        ${games[i].tag.map((tagText) => `<span class="game-tag">${tagText}</span>`).join(',')}
-                    </div>
+                    
                 </div>
                 <div class="right-area">
                     <div class="game-name">${games[i].title}</div>
                     <div class="game-info">${games[i].info}</div>
-                    <div class="game-download">游戏下载链接<a target="_blank" href="${games[i].link}" >点击下载</a></div>
+                    <div class="game-download"><a target="_blank" href="${games[i].link}" >点击下载</a></div>
+                </div>
+                <div class="game-tag-bar">
+                        ${games[i].tag.map((tagText) => `<span class="game-tag">${tagText}</span>`).join(',')}
                 </div>
             </div>
-            <div class="content">${games[i].rulesInfo}</div>
         </div>
         `)
 
@@ -213,18 +227,18 @@ $(document).ready(function () {
 
     // 添加鼠标事件
     $('.game-item').hover(
-        function() {
+        function () {
             $(this).find('img').hide();
             $(this).find('video').show().get(0).play();
         },
-        function() {
+        function () {
             $(this).find('video').hide().get(0).pause();
             $(this).find('img').show();
         }
     );
 
     // 修改点击事件
-    $('.game-item').click(function() {
+    $('.game-item').click(function () {
         const index = $(this).index(); // 获取点击的游戏索引
         const game = games[index]; // 获取对应的游戏信息
 
