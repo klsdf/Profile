@@ -42,7 +42,7 @@ export default defineComponent({
   border-radius: 8px;
   margin: 10px;
   padding: 10px;
-  width: 200px;
+  width: 250px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -57,7 +57,8 @@ export default defineComponent({
 
 .game-image {
   width: 100%;
-  height: auto;
+  height: 150px;
+  object-fit: cover;
   border-radius: 4px;
   margin-bottom: 10px;
 }
