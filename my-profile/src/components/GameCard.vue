@@ -1,24 +1,36 @@
 <template>
-  <div class="card">
-    <img :src="image" alt="game screenshot" class="game-image" />
-    <h3>{{ name }}</h3>
+  <div class="card" @click="goToDetail">
+    <img :src="game.img[0]" alt="game screenshot" class="game-image" />
+    <h3>{{ game.title }}</h3>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'GameCard',
   props: {
-    name: {
-      type: String,
-      required: true
-    },
-    image: {
-      type: String,
+    game: {
+      type: Object as () => {
+        title: string;
+        img: string[];
+        info: string;
+        video: string;
+        link: string;
+        rulesInfo: string;
+        tag: string[];
+      },
       required: true
     }
+  },
+  setup(props) {
+    const router = useRouter();
+    const goToDetail = () => {
+      router.push({ name: 'GameDetail', params: { gameName: props.game.title } });
+    };
+    return { goToDetail };
   }
 });
 </script>
@@ -32,11 +44,25 @@ export default defineComponent({
   width: 200px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .game-image {
   width: 100%;
   height: auto;
   border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #333;
 }
 </style> 
