@@ -59,6 +59,10 @@ export default defineComponent({
 </script>
 
 <style scoped>
+h1 {
+  color: #ffffff;
+  font-size: 3.5em;
+}
 .game-detail {
   max-width: 800px;
   margin: 0 auto;

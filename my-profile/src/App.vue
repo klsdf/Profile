@@ -12,8 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #a5a5a5;
-  background-color: #000000;
+
   overflow: hidden;
 
 }
@@ -23,6 +22,8 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  color: #a5a5a5;
+  background-color: #000000;
 }
 
 nav {
