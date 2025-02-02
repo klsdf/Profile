@@ -1,10 +1,13 @@
 <template>
   <div class="home">
+    <div class="center-text">游戏作品集</div>
     <div class="card-container">
       <GameCard
-        v-for="game in games"
+        v-for="(game, index) in games"
         :key="game.title"
         :game="game"
+        :style="getCardStyle(index)"
+        class="game-card"
       />
     </div>
   </div>
@@ -88,7 +91,12 @@ export default {
         },
         {
           title: '免费领取JavaScript学习资料',
-          img: [require('@/assets/免费领取JavaScript学习资料/imgs/1.png')],
+          img: [
+            require('@/assets/免费领取JavaScript学习资料/imgs/1.png'),
+            require('@/assets/免费领取JavaScript学习资料/imgs/2.png'),
+            require('@/assets/免费领取JavaScript学习资料/imgs/3.png'),
+            require('@/assets/免费领取JavaScript学习资料/imgs/4.png'),
+          ],
           info: '本游戏是meta游戏',
           video: 'https://www.bilibili.com/video/BV1Tj411m7Mp/?spm_id_from=333.999.0.0',
           link: '',
@@ -115,14 +123,79 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    this.startAnimation();
+  },
+  methods: {
+    startAnimation() {
+      this.games.forEach((game, index) => {
+        this.animateCard(index);
+      });
+    },
+    animateCard(index) {
+      const card = this.$el.querySelectorAll('.game-card')[index];
+      let speedX = (Math.random() - 0.5) * 0.1; // 随机速度
+      let speedY = (Math.random() - 0.5) * 0.1;
+      let posX = Math.random() * 100; // 初始位置
+      let posY = Math.random() * 80;
+      let isPaused = false; // 标志变量
+
+      const move = () => {
+        if (!isPaused) {
+          posX += speedX;
+          posY += speedY;
+          // 确保卡片不会超出边界
+          if (posX < 0 || posX > 100) speedX *= -1;
+          if (posY < 0 || posY > 100) speedY *= -1;
+          card.style.left = `${posX}vw`;
+          card.style.top = `${posY}vh`;
+        }
+        requestAnimationFrame(move);
+      };
+
+      card.addEventListener('mouseenter', () => {
+        isPaused = true;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        isPaused = false;
+      });
+
+      move();
+    },
+    getCardStyle(index) {
+      // 移除不再需要的代码
+    }
   }
 };
 </script>
 
 <style scoped>
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.game-card {
+  position: absolute;
+  transition: transform 1s;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3em;
+  color: #999;
+  z-index: 100;
+  color: #aaaaaa;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  
 }
 </style>

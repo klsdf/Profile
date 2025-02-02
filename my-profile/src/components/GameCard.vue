@@ -42,22 +42,26 @@ export default defineComponent({
   border-radius: 8px;
   margin: 10px;
   padding: 10px;
-  width: 250px;
+  width: 300px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  background-color: #fff;
+  background-color: #3d3d3d;
+  opacity: 0.7;
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.15);
+  color: #ffffff;
+  background-color: #919191;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
 
 .game-image {
   width: 100%;
-  height: 150px;
+  height: 70%;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 10px;
@@ -65,6 +69,6 @@ export default defineComponent({
 
 h3 {
   font-size: 1.2em;
-  color: #333;
+  /* color: #333; */
 }
 </style> 

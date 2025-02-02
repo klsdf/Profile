@@ -1,6 +1,11 @@
 <template>
   <div class="game-detail" v-if="game">
-    <img :src="game.img[0]" alt="game screenshot" class="game-image" />
+    <swiper :options="swiperOptions">
+      <swiper-slide v-for="(image, index) in game.img" :key="index">
+        <img :src="image" alt="game screenshot" class="game-image" />
+      </swiper-slide>
+      <div class="swiper-pagination"></div>
+    </swiper>
     <h1>{{ game.title }}</h1>
     <p>{{ game.info }}</p>
     <video v-if="game.video" controls>
@@ -23,11 +28,32 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+import SwiperClass, { Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+
 export default defineComponent({
   name: 'GameDetail',
+  components: {
+    Swiper,
+    SwiperSlide
+  },
   setup() {
     const game = JSON.parse(localStorage.getItem('selectedGame') || '{}');
-    return { game };
+    const swiperOptions = {
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      modules: [Pagination],
+    };
+    return { game, swiperOptions };
   }
 });
 </script>
