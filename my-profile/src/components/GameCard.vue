@@ -28,6 +28,7 @@ export default defineComponent({
   setup(props) {
     const router = useRouter();
     const goToDetail = () => {
+      localStorage.setItem('selectedGame', JSON.stringify(props.game));
       router.push({ name: 'GameDetail', params: { gameName: props.game.title } });
     };
     return { goToDetail };

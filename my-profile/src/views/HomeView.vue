@@ -23,7 +23,7 @@ export default {
       games: [
         {
           title: '姆姆因子',
-          img: [require('@/assets/姆姆因子/截图/game.png')],
+          img: [require('@/assets/姆姆因子/imgs/game.png')],
           info: '姆姆因子是一款PVE的类RTS游戏',
           video: '',
           link: 'https://pan.baidu.com/s/19IgyKDiHFaP0Ius5re1wEQ?pwd=44pm',
@@ -32,7 +32,7 @@ export default {
         },
         {
           title: '还乡',
-          img: ['./img/game1.png'],
+          img: [require('@/assets/还乡/imgs/game1.png')],
           info: '生存类战棋+塔防的设计',
           video: '',
           link: 'https://pan.baidu.com/s/1g263gxC3fPlRSYfy7HcNDA?pwd=l1qm',
