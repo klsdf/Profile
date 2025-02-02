@@ -107,10 +107,20 @@ let 姆姆因子 = new GameInfo();
 姆姆因子.setTag(["RTS", "单局对抗", "细胞战争"]);
 
 
+let 还乡 = new GameInfo();  
+还乡.setTitle("还乡");
+还乡.setInfo("生存类战棋+塔防的设计");
+还乡.setImg(["./img/game1.png"]);
+还乡.setVideo("");
+还乡.setLink("https://pan.baidu.com/s/1g263gxC3fPlRSYfy7HcNDA?pwd=l1qm");
+还乡.setRulesInfo("");
+还乡.setTag(["新棋", "塔防", "生存"]);
+
 
 
 let games = [
    姆姆因子,
+    还乡,
 
 
 
