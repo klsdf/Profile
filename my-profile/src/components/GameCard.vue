@@ -44,11 +44,10 @@ export default defineComponent({
   padding: 10px;
   width: 300px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.555);
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
   background-color: #3d3d3d;
-  opacity: 0.7;
 }
 
 .card:hover {
@@ -56,7 +55,7 @@ export default defineComponent({
   color: #ffffff;
   background-color: #919191;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  opacity: 1;
+  z-index: 100;
 }
 
 .game-image {
