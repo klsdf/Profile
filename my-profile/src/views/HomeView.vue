@@ -120,6 +120,24 @@ export default {
           link: '',
           rulesInfo: '',
           tag: ['迷因', '超现实主义', '艺术']
+        },
+        {
+          title: '抽卡，合并，大乱斗！',
+          img: [require('@/assets/抽卡合成大乱斗/imgs/1.png')],
+          info: '游戏简介',
+          video: '',
+          link: '',
+          rulesInfo: '',
+          tag: ['抽卡', '超现实主义', '艺术']
+        },
+        {
+          title: '林西物语',
+          img: [require('@/assets/林西物语/imgs/1.png')],
+          info: '游戏简介',
+          video: '',
+          link: '',
+          rulesInfo: '',
+          tag: ['抽卡', '超现实主义', '艺术']
         }
       ]
     };
