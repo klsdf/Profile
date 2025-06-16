@@ -1,9 +1,21 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">游戏</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav> -->
-  <router-view/>
+
+  <router-link to="/" class="home-btn">
+    🎵 游戏作品集
+  </router-link>
+  <router-link to="/music" class="music-btn">
+    🎵 音乐作品集
+  </router-link>
+  <router-link to="/article" class="article-btn">
+    🎵 游戏研究论文
+  </router-link>
+  <router-link to="/technology" class="technology-btn">
+    🎵 技术作品集
+  </router-link>
+  <router-link to="/profile" class="profile-btn">
+    🎵 个人简历
+  </router-link>
+  <router-view />
 </template>
 
 <style>
@@ -16,7 +28,9 @@
   overflow: hidden;
 
 }
-html, body {
+
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;

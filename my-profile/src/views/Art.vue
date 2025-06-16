@@ -1,0 +1,100 @@
+<template>
+  <div class="art-view">
+    <h1 class="page-title">美术作品集</h1>
+    <div class="art-gallery">
+      <div v-for="(art, index) in artworks" :key="index" class="art-item">
+        <div class="art-image-wrapper">
+          <img :src="art.image" :alt="art.title" class="art-image" />
+        </div>
+        <h2 class="art-title">{{ art.title }}</h2>
+        <p class="art-desc">{{ art.description }}</p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+const artworks = [
+  {
+    image: 'https://placehold.co/400x300?text=作品1',
+    title: '数字插画《晨曦》',
+    description: '2023年创作，风格为写实主义，使用Procreate完成。',
+  },
+  {
+    image: 'https://placehold.co/400x300?text=作品2',
+    title: '角色设定《未来战士》',
+    description: '2022年创作，科幻风格，Photoshop绘制。',
+  },
+  {
+    image: 'https://placehold.co/400x300?text=作品3',
+    title: '场景设计《古镇夜色》',
+    description: '2021年创作，偏国风，SAI+PS联合完成。',
+  },
+];
+</script>
+
+<style scoped>
+.art-view {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.page-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.art-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+.art-item {
+  width: 300px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 18px 14px 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.art-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.art-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.art-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 10px 0 6px 0;
+  text-align: center;
+}
+.art-desc {
+  font-size: 0.98rem;
+  color: #444;
+  text-align: center;
+  line-height: 1.6;
+}
+</style>
+
