@@ -20,16 +20,6 @@ const artworks = [
     title: '数字插画《晨曦》',
     description: '2023年创作，风格为写实主义，使用Procreate完成。',
   },
-  {
-    image: 'https://placehold.co/400x300?text=作品2',
-    title: '角色设定《未来战士》',
-    description: '2022年创作，科幻风格，Photoshop绘制。',
-  },
-  {
-    image: 'https://placehold.co/400x300?text=作品3',
-    title: '场景设计《古镇夜色》',
-    description: '2021年创作，偏国风，SAI+PS联合完成。',
-  },
 ];
 </script>
 

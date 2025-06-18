@@ -14,34 +14,19 @@
 <script setup>
 const technologies = [
   {
-    name: 'Vue.js',
-    category: '前端框架',
-    description: '渐进式JavaScript框架，专注于构建用户界面。',
+    name: 'YanGameFramework',
+    category: '游戏框架',
+    description: '一款基于unity的游戏框架，内置了完整的本地化、UI解决方案。以及内置了大量的常用工具库。',
   },
   {
-    name: 'TypeScript',
-    category: '编程语言',
-    description: 'JavaScript的超集，提供类型系统和更强的开发体验。',
+    name: 'ButterManager',
+    category: '资产管理器',
+    description: '一款基于Electron的资产管理器，用于管理用户电脑上的各种资源，并提供游戏化方案。比如用户某一个应用的使用时长，数据统计、截图。',
   },
   {
-    name: 'Node.js',
-    category: '后端',
-    description: '基于Chrome V8引擎的JavaScript运行环境，适合构建高性能服务器端应用。',
-  },
-  {
-    name: 'Vite',
-    category: '构建工具',
-    description: '新一代前端构建工具，极快的冷启动和热更新体验。',
-  },
-  {
-    name: 'Git',
-    category: '版本控制',
-    description: '分布式版本控制系统，广泛用于代码管理和协作。',
-  },
-  {
-    name: 'Docker',
-    category: '容器化',
-    description: '应用容器引擎，实现应用的快速部署与隔离。',
+    name: '帽子社官网',
+    category: '官网',
+    description: '一款基于jquery+Express+less的网站，用于展示帽子社的各类作品。',
   },
 ];
 </script>

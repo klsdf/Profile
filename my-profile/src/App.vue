@@ -6,6 +6,9 @@
   <router-link to="/music" class="music-btn">
     🎵 音乐作品集
   </router-link>
+  <router-link to="/art" class="art-btn">
+    🎵 美术作品集
+  </router-link>
   <router-link to="/article" class="article-btn">
     🎵 游戏研究论文
   </router-link>
@@ -24,9 +27,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-
-  overflow: hidden;
-
 }
 
 html,
@@ -35,7 +35,6 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
   color: #a5a5a5;
   background-color: #000000;
 }
