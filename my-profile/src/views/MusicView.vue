@@ -8,15 +8,22 @@
           <h2>{{ music.title }}</h2>
           <p class="desc">{{ music.desc }}</p>
           <p class="idea"><strong>创作思路：</strong>{{ music.idea }}</p>
-          <button @click="play(idx)">
-            {{ currentPlaying === idx ? '暂停' : '试听' }}
-          </button>
-          <audio
-            ref="audio"
-            :src="music.audio"
-            @ended="onEnded(idx)"
-            v-show="false"
-          ></audio>
+          
+          <!-- 播放控制区域 -->
+          <div class="player-controls">
+            <button @click="play(idx)" class="play-btn">
+              {{ currentPlaying === idx ? '暂停' : '试听' }}
+            </button>
+            
+            <!-- 原生音频控件 -->
+            <audio
+              ref="audio"
+              :src="music.audio"
+              @ended="onEnded(idx)"
+              controls
+              class="audio-player"
+            ></audio>
+          </div>
         </div>
       </div>
     </div>
@@ -30,25 +37,37 @@ export default {
     return {
       musics: [
         {
-          title: "晨曦之歌",
+          title: "独自等待",
           desc: "一首描绘清晨阳光的钢琴曲。",
           idea: "通过明快的旋律和和声，表现新一天的希望与活力。",
           cover: require('@/assets/music/cover1.jpg'),
-        //   audio: require('@/assets/music/song1.mp3')
+          audio: require('@/assets/music/043-独自等待-2021-3-1.mp3')
         },
         {
-          title: "夜色流光",
+          title: "白色的回忆",
           desc: "电子与爵士融合的夜晚氛围音乐。",
           idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
-          cover: require('@/assets/music/cover2.jpg'),
-        //   audio: require('@/assets/music/song2.mp3')
+          // cover: require('@/assets/music/045-白色的回忆-2021.3.1.jpg'),
+          audio: require('@/assets/music/045-白色的回忆-2021.3.1.mp3')
+        },
+        {
+          title: "软萌的小猫猫",
+          desc: "电子与爵士融合的夜晚氛围音乐。",
+          idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
+          // cover: require('@/assets/music/040-软萌的小猫猫-2020.11.25.jpg'),
+          audio: require('@/assets/music/040-软萌的小猫猫-2020.11.25.mp3')
         }
+
         // 可继续添加更多音乐
       ],
       currentPlaying: null
     };
   },
   methods: {
+    /**
+     * 播放或暂停音乐
+     * @param {number} idx - 音乐索引
+     */
     play(idx) {
       const audios = this.$refs.audio;
       // 兼容单个或多个audio
@@ -66,6 +85,11 @@ export default {
         this.currentPlaying = idx;
       }
     },
+    
+    /**
+     * 音乐播放结束时的处理
+     * @param {number} idx - 音乐索引
+     */
     onEnded(idx) {
       if (this.currentPlaying === idx) {
         this.currentPlaying = null;
@@ -122,7 +146,15 @@ export default {
   color: #888;
   margin-bottom: 12px;
 }
-button {
+
+/* 播放控制区域样式 */
+.player-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.play-btn {
   padding: 8px 20px;
   background: #4f8cff;
   color: #fff;
@@ -131,8 +163,33 @@ button {
   cursor: pointer;
   font-size: 1em;
   transition: background 0.2s;
+  align-self: flex-start;
 }
-button:hover {
+
+.play-btn:hover {
   background: #346fd1;
+}
+
+/* 原生音频播放器样式 */
+.audio-player {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* 自定义音频控件样式（可选） */
+.audio-player::-webkit-media-controls-panel {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.audio-player::-webkit-media-controls-play-button {
+  background-color: #4f8cff;
+  border-radius: 50%;
+}
+
+.audio-player::-webkit-media-controls-current-time-display,
+.audio-player::-webkit-media-controls-time-remaining-display {
+  color: #333;
+  font-weight: 500;
 }
 </style>
