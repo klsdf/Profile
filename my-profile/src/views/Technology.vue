@@ -50,6 +50,15 @@ const technologies = [
     description: '一款基于Unity的UI的UberShader，用于实现各种UI效果。',
     link: 'https://github.com/yourname/unity-ubershader',
   },
+  {
+    name: 'GameDesignNodeGraph',
+    category: '游戏设计节点图',
+    description: '一款基于原生js的GameDesignNodeGraph，系统描述并阐释了游戏设计的各种结构，并用节点图的形式快速帮设计师生成一篇游戏策划文档。',
+    link: 'https://github.com/klsdf/GameDesignNodeGraph.git',
+  },
+  {
+    name: 'GameDesignNodeGraph',
+  }
 ];
 </script>
 
