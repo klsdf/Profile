@@ -7,6 +7,7 @@
         <span class="tech-category">{{ tech.category }}</span>
       </div>
       <p class="tech-description">{{ tech.description }}</p>
+      <a v-if="tech.link" :href="tech.link" class="tech-link" target="_blank" rel="noopener">访问仓库</a>
     </div>
   </div>
 </template>
@@ -17,16 +18,37 @@ const technologies = [
     name: 'YanGameFramework',
     category: '游戏框架',
     description: '一款基于unity的游戏框架，内置了完整的本地化、UI解决方案。以及内置了大量的常用工具库。',
+    link: 'https://github.com/yourname/YanGameFramework',
   },
   {
     name: 'ButterManager',
     category: '资产管理器',
     description: '一款基于Electron的资产管理器，用于管理用户电脑上的各种资源，并提供游戏化方案。比如用户某一个应用的使用时长，数据统计、截图。',
+    link: 'https://github.com/yourname/ButterManager',
   },
   {
     name: '帽子社官网',
     category: '官网',
     description: '一款基于jquery+Express+less的网站，用于展示帽子社的各类作品。',
+    link: 'https://github.com/yourname/maozishe',
+  },
+  {
+    name: 'QQ机器人',
+    category: 'QQ机器人',
+    description: '一款基于nodejs的QQ机器人，用于管理用户电脑上的各种资源，并提供游戏化方案。比如用户某一个应用的使用时长，数据统计、截图。',
+    link: 'https://github.com/yourname/qqbot',
+  },
+  {
+    name: '后处理框架',
+    category: '后处理框架',
+    description: '一款基于Unity的2D后处理框架，用于实现各种后处理效果。',
+    link: 'https://github.com/yourname/unity-postprocess',
+  },
+  {
+    name: 'UI的UberShader',
+    category: 'UI的UberShader',
+    description: '一款基于Unity的UI的UberShader，用于实现各种UI效果。',
+    link: 'https://github.com/yourname/unity-ubershader',
   },
 ];
 </script>
@@ -76,5 +98,19 @@ const technologies = [
   font-size: 1rem;
   color: #444;
   line-height: 1.7;
+}
+.tech-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 14px;
+  background: #3a7afe;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.tech-link:hover {
+  background: #255ecb;
 }
 </style>

@@ -18,6 +18,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/Art.vue')
   },
   {
+    path: '/game-community',
+    name: 'game-community',
+    component: () => import('../views/GameCommunity.vue')
+  },
+  {
     path: '/article',
     name: 'article',
     component: () => import('../views/ArticleView.vue')

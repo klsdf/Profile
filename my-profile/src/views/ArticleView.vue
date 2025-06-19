@@ -4,6 +4,16 @@
     <div v-for="(paper, index) in papers" :key="index" class="paper-item">
       <h2 class="paper-title">{{ paper.title }}</h2>
       <p class="paper-abstract">{{ paper.abstract }}</p>
+      <a
+        v-if="paper.link"
+        :href="paper.link"
+        class="paper-link"
+        target="_blank"
+        rel="noopener"
+        :download="getFileName(paper.link)"
+      >
+        点击下载文档
+      </a>
     </div>
   </div>
 </template>
@@ -11,18 +21,15 @@
 <script setup>
 const papers = [
   {
-    title: '游戏机制与玩家行为的关系研究',
+    title: '基于前端框架技术的 meta 游戏设计与开发',
     abstract: '本文探讨了不同游戏机制如何影响玩家的行为选择，结合实验数据分析玩家在不同情境下的决策模式。',
-  },
-  {
-    title: '沉浸感在虚拟现实游戏中的作用',
-    abstract: '研究虚拟现实技术提升游戏沉浸感的关键因素，并分析沉浸感对玩家体验的影响。',
-  },
-  {
-    title: '游戏化学习的有效性分析',
-    abstract: '通过对比实验，评估游戏化元素在教育场景中的应用效果，探讨其对学习动机和成绩的提升作用。',
+    link: '/paper/基于前端框架技术的 meta 游戏设计与开发.docx',
   },
 ];
+
+const getFileName = (link) => {
+  return link.split('/').pop();
+};
 </script>
 
 <style scoped>
@@ -57,5 +64,19 @@ const papers = [
   font-size: 1rem;
   color: #444;
   line-height: 1.7;
+}
+.paper-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 14px;
+  background: #3a7afe;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.paper-link:hover {
+  background: #255ecb;
 }
 </style>

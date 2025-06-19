@@ -1,5 +1,4 @@
 <template>
-
   <router-link to="/" class="home-btn">
     🎵 游戏作品集
   </router-link>
@@ -14,6 +13,9 @@
   </router-link>
   <router-link to="/technology" class="technology-btn">
     🎵 技术作品集
+  </router-link>
+  <router-link to="/game-community" class="game-community-btn">
+    🎵 游戏社区运营
   </router-link>
   <router-link to="/profile" class="profile-btn">
     🎵 个人简历
