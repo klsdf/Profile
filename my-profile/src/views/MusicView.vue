@@ -29,38 +29,87 @@ export default {
     return {
       musics: [
         {
+          title: "昙花片段",
+          desc: "昙花片段",
+          idea: "昙花片段",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/昙花片段.mp3')
+        },
+        {
+          title: "曾经的事了",
+          desc: "创作于2016年",
+          idea: "创作于2016年",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/038-初恋-2016.11.12.mp3')
+        },
+        {
+          title: "午睡与暖阳",
+          desc: "创作于2016年",
+          idea: "创作于2016年",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/016-午睡与暖阳.mp3')
+        },
+        {
+          title: "黄昏",
+          desc: "创作于2019年",
+          idea: "创作于2019年",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/002-黄昏2012.9.mp3')
+        },
+        {
+          title: "小步舞曲",
+          desc: "创作于2020年",
+          idea: "创作于2020年",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/015-小步舞曲.mp3')
+        },
+        {
+          title: "欢乐瞬间",
+          desc: "创作于2020年",
+          idea: "创作于2020年",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/046-欢乐瞬间-2020.12.4.mp3')
+        },
+        {
+          title: "小步舞曲",
+          desc: "创作于2020年",
+          idea: "创作于2020年",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/015-小步舞曲.mp3')
+        },
+        {
           title: "独自等待",
           desc: "一首描绘清晨阳光的钢琴曲。",
           idea: "通过明快的旋律和和声，表现新一天的希望与活力。",
-          cover: require('@/assets/music/cover1.jpg'),
+          cover: require('@/assets/img/游戏《山的那边》宣传海报设计.png'),
           audio: require('@/assets/music/043-独自等待-2021-3-1.mp3')
         },
         {
           title: "白色的回忆",
           desc: "电子与爵士融合的夜晚氛围音乐。",
           idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
-          // cover: require('@/assets/music/045-白色的回忆-2021.3.1.jpg'),
+          cover: require('@/assets/img/游戏《山的那边》宣传海报设计.png'),
           audio: require('@/assets/music/山的那边/045-白色的回忆.mp3')
         },
         {
           title: "软萌的小猫猫",
           desc: "电子与爵士融合的夜晚氛围音乐。",
           idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
-          // cover: require('@/assets/music/040-软萌的小猫猫-2020.11.25.jpg'),
+          cover: require('@/assets/img/cover1.jpg'),
           audio: require('@/assets/music/040-软萌的小猫猫-2020.11.25.mp3')
         },
         {
           title: "萤火",
           desc: "一首描绘萤火虫的钢琴曲。",
           idea: "通过轻柔的旋律和和声，表现萤火虫的美丽与神秘。",
-          // cover: require('@/assets/music/040-软萌的小猫猫-2020.11.25.jpg'),
+          cover: require('@/assets/img/云.jpg'),
           audio: require('@/assets/music/029-萤火.mp3')
         },
         {
           title: "花儿主题变奏曲",
           desc: "一首描绘花儿的钢琴曲。",
           idea: "通过轻柔的旋律和和声，表现花儿的美丽与神秘。",
-          // cover: require('@/assets/music/040-软萌的小猫猫-2020.11.25.jpg'),
+          cover: require('@/assets/img/云.jpg'),
           audio: require('@/assets/music/012-花儿主题变奏曲.mp3')
         },
         {
@@ -97,7 +146,63 @@ export default {
           idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
           cover: require('@/assets/img/堡外就医 宣传图.png'),
           audio: require('@/assets/music/堡外就医/开场的背景.mp3')
-        }
+        },
+
+
+        //节奏挑战
+        {
+          title: "level0",
+          desc: "level0",
+          idea: "level0",
+          cover: require('@/assets/img/节奏挑战cover.png'),
+          audio: require('@/assets/music/节奏挑战/level0.mp3')
+        },
+        {
+          title: "level1",
+          desc: "level1",
+          idea: "level1",
+          cover: require('@/assets/img/节奏挑战cover.png'),
+          audio: require('@/assets/music/节奏挑战/Project_1.mp3')
+        },
+        {
+          title: "level2 主旋律",
+          desc: "level2",
+          idea: "level2",
+          cover: require('@/assets/img/节奏挑战cover.png'),
+          audio: require('@/assets/music/节奏挑战/Project2主旋律.mp3')
+        },
+        {
+          title: "level2 完整版",
+          desc: "level2",
+          idea: "level2",
+          cover: require('@/assets/img/节奏挑战cover.png'),
+          audio: require('@/assets/music/节奏挑战/Project_2 - 决定版.mp3')
+        },
+        {
+          title: "level2 fever",
+          desc: "level2",
+          idea: "level2",
+          cover: require('@/assets/img/节奏挑战cover.png'),
+          audio: require('@/assets/music/节奏挑战/Project2-fever.mp3')
+        },
+
+        //免费领取
+        {
+          title: "萤雪",
+          desc: "免费领取",
+          idea: "免费领取",
+          cover: require('@/assets/img/萤雪.jpg'),
+          audio: require('@/assets/music/免费领取/萤雪.mp3')
+        },
+        {
+          title: "奇怪？",
+          desc: "免费领取",
+          idea: "免费领取",
+          cover: require('@/assets/img/萤雪.jpg'),
+          audio: require('@/assets/music/免费领取/奇怪？.mp3')
+        },
+      
+        
         
       ],
       currentPlaying: null
