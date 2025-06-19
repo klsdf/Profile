@@ -8,21 +8,13 @@
           <h2>{{ music.title }}</h2>
           <p class="desc">{{ music.desc }}</p>
           <p class="idea"><strong>创作思路：</strong>{{ music.idea }}</p>
-          
+
           <!-- 播放控制区域 -->
           <div class="player-controls">
-            <button @click="play(idx)" class="play-btn">
-              {{ currentPlaying === idx ? '暂停' : '试听' }}
-            </button>
-            
+         
+
             <!-- 原生音频控件 -->
-            <audio
-              ref="audio"
-              :src="music.audio"
-              @ended="onEnded(idx)"
-              controls
-              class="audio-player"
-            ></audio>
+            <audio ref="audio" :src="music.audio" @ended="onEnded(idx)" controls class="audio-player"></audio>
           </div>
         </div>
       </div>
@@ -48,7 +40,7 @@ export default {
           desc: "电子与爵士融合的夜晚氛围音乐。",
           idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
           // cover: require('@/assets/music/045-白色的回忆-2021.3.1.jpg'),
-          audio: require('@/assets/music/045-白色的回忆-2021.3.1.mp3')
+          audio: require('@/assets/music/山的那边/045-白色的回忆.mp3')
         },
         {
           title: "软萌的小猫猫",
@@ -56,9 +48,57 @@ export default {
           idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
           // cover: require('@/assets/music/040-软萌的小猫猫-2020.11.25.jpg'),
           audio: require('@/assets/music/040-软萌的小猫猫-2020.11.25.mp3')
+        },
+        {
+          title: "萤火",
+          desc: "一首描绘萤火虫的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现萤火虫的美丽与神秘。",
+          // cover: require('@/assets/music/040-软萌的小猫猫-2020.11.25.jpg'),
+          audio: require('@/assets/music/029-萤火.mp3')
+        },
+        {
+          title: "花儿主题变奏曲",
+          desc: "一首描绘花儿的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现花儿的美丽与神秘。",
+          // cover: require('@/assets/music/040-软萌的小猫猫-2020.11.25.jpg'),
+          audio: require('@/assets/music/012-花儿主题变奏曲.mp3')
+        },
+        {
+          title: "堡外就医pv曲",
+          desc: "一首描绘堡外就医的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/堡外就医pv曲.mp3')
+        },
+        {
+          title: "lucy的演奏带和声",
+          desc: "一首描绘堡外就医的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/lucy的演奏带和声.mp3')
+        },
+        {
+          title: "被boss追杀",
+          desc: "一首描绘堡外就医的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/被boss追杀.mp3')
+        },
+        {
+          title: "背景的噪音",
+          desc: "一首描绘堡外就医的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/背景的噪音.mp3')
+        },
+        {
+          title: "开场的背景",
+          desc: "一首描绘堡外就医的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/开场的背景.mp3')
         }
-
-        // 可继续添加更多音乐
+        
       ],
       currentPlaying: null
     };
@@ -85,7 +125,7 @@ export default {
         this.currentPlaying = idx;
       }
     },
-    
+
     /**
      * 音乐播放结束时的处理
      * @param {number} idx - 音乐索引
@@ -106,42 +146,53 @@ export default {
   padding: 24px;
   background: #f8f8f8;
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
+
 .title {
   text-align: center;
   margin-bottom: 32px;
   font-size: 2.5em;
   color: #333;
 }
+
 .music-list {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
+
 .music-card {
   display: flex;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   padding: 20px;
   align-items: center;
   gap: 24px;
 }
+
 .cover {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 100%;
+  max-height: 200px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;   /* 保持比例填充，超出部分裁剪 */
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;    /* 如需无圆角 */
   background: #eee;
 }
+
 .info {
   flex: 1;
 }
+
 .desc {
   color: #666;
   margin: 8px 0;
 }
+
 .idea {
   color: #888;
   margin-bottom: 12px;

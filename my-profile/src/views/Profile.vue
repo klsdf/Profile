@@ -92,16 +92,10 @@ const jobs = [
 
 const educations = [
   {
-    school: '某著名大学',
-    degree: '硕士研究生｜计算机科学与技术',
-    period: '2017.09 - 2019.07',
-    description: '主攻方向为人机交互与游戏设计，发表多篇相关论文。',
-  },
-  {
-    school: '某著名大学',
-    degree: '学士｜软件工程',
-    period: '2013.09 - 2017.07',
-    description: '系统学习软件开发理论与实践，成绩优异。',
+    school: '西安石油大学',
+    degree: '数字媒体技术',
+    period: '2018.09 - 2022.07',
+    description: '主攻方向为游戏开发，游戏设计，前端开发。',
   },
 ];
 
