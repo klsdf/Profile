@@ -4,11 +4,9 @@
     <!-- 社区概览区 -->
     <section class="overview-section">
       <h2 class="section-title">社区概览</h2>
-      <p class="overview-desc">{{ overview.desc }}</p>
-      <div class="overview-info">
-        <span>成立时间：{{ overview.founded }}</span>
-        <span>定位：{{ overview.position }}</span>
-        <span>成员数：{{ overview.members }}</span>
+      <div class="overview-content">
+        <img :src="communityLogo" alt="社区 Logo" class="community-logo" />
+        <p class="overview-desc">{{ overview.desc }}</p>
       </div>
     </section>
     <!-- 成果数据区 -->
@@ -45,11 +43,13 @@
 </template>
 
 <script setup>
+import communityLogo from '@/assets/logo.png';
+
 const overview = {
-  desc: '“玩家之家”是我于2020年创办并持续运营的游戏社区，致力于为玩家提供一个交流、分享与成长的平台。社区以高质量内容和活跃氛围著称，吸引了众多核心玩家和内容创作者。',
-  founded: '2020年3月',
-  position: '高质量玩家交流平台',
-  members: '35000+',
+  desc: `“帽子社”是我于2022年在大学期间创办并持续运营的游戏社区，致力于创立一个可以研究游戏理论，交流游戏设计，分享游戏知识的社区平台。
+在中国，很多游戏策划并没有接受过专业的游戏设计教育，他们缺乏对游戏设计理论的了解，也缺乏对游戏设计方法的掌握。
+导致很多新手在做游戏的时候会直接从理论入手，而无法学到实际的制作经验。而很多经验丰富的策划，又缺乏对游戏设计理论的了解，导致会被自己的经验所束缚。
+因此，我创立了“帽子社”，旨在知行合一，既要研究游戏理论又要着眼于实际的游戏制作。`,
 };
 
 const stats = [
@@ -58,6 +58,7 @@ const stats = [
   { label: '累计发帖', value: '18,000+' },
   { label: '举办线上活动', value: '40+' },
   { label: '原创内容数', value: '5,000+' },
+  { label: '哔哩哔哩粉丝数', value: '8,000+' },
 ];
 
 const featuredPosts = [
@@ -118,10 +119,22 @@ const achievements = [
 .overview-section {
   margin-bottom: 32px;
 }
+.overview-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.community-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 .overview-desc {
   color: #444;
   font-size: 1.05rem;
-  margin-bottom: 10px;
+  line-height: 1.8;
 }
 .overview-info {
   color: #666;

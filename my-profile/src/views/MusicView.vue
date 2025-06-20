@@ -28,6 +28,8 @@ export default {
   data() {
     return {
       musics: [
+
+      //日常
         {
           title: "昙花片段",
           desc: "昙花片段",
@@ -41,6 +43,14 @@ export default {
           idea: "创作于2016年",
           cover: require('@/assets/img/云.jpg'),
           audio: require('@/assets/music/日常/038-初恋-2016.11.12.mp3')
+        },
+
+        {
+          title: "古筝随想曲",
+          desc: "古筝随想曲",
+          idea: "古筝随想曲",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/017-古筝随想曲.mp3')
         },
         {
           title: "午睡与暖阳",
@@ -77,12 +87,51 @@ export default {
           cover: require('@/assets/img/云.jpg'),
           audio: require('@/assets/music/日常/015-小步舞曲.mp3')
         },
+       
+        {
+          title: "软萌的小猫猫",
+          desc: "电子与爵士融合的夜晚氛围音乐。",
+          idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
+          cover: require('@/assets/img/cover1.jpg'),
+          audio: require('@/assets/music/日常/040-软萌的小猫猫-2020.11.25.mp3')
+        },
+        {
+          title: "萤火",
+          desc: "一首描绘萤火虫的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现萤火虫的美丽与神秘。",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/029-萤火.mp3')
+        },
+        {
+          title: "花儿主题变奏曲",
+          desc: "一首描绘花儿的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现花儿的美丽与神秘。",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/012-花儿主题变奏曲.mp3')
+        },
+        {
+          title: "分别",
+          desc: "一首描绘花儿的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现花儿的美丽与神秘。",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/日常/006-分别.mp3')
+        },
+
+        {
+          title: "迷踪林",
+          desc: "文芒迷踪林",
+          idea: "文芒迷踪林",
+          cover: require('@/assets/img/云.jpg'),
+          audio: require('@/assets/music/文芒/迷踪林.mp3')
+        },
+        //山的那边
+        
         {
           title: "独自等待",
           desc: "一首描绘清晨阳光的钢琴曲。",
           idea: "通过明快的旋律和和声，表现新一天的希望与活力。",
           cover: require('@/assets/img/游戏《山的那边》宣传海报设计.png'),
-          audio: require('@/assets/music/043-独自等待-2021-3-1.mp3')
+          audio: require('@/assets/music/山的那边/043-独自等待-2021-3-1.mp3')
         },
         {
           title: "白色的回忆",
@@ -91,33 +140,21 @@ export default {
           cover: require('@/assets/img/游戏《山的那边》宣传海报设计.png'),
           audio: require('@/assets/music/山的那边/045-白色的回忆.mp3')
         },
-        {
-          title: "软萌的小猫猫",
-          desc: "电子与爵士融合的夜晚氛围音乐。",
-          idea: "用电子音色和爵士节奏，营造都市夜晚的流动感。",
-          cover: require('@/assets/img/cover1.jpg'),
-          audio: require('@/assets/music/040-软萌的小猫猫-2020.11.25.mp3')
-        },
-        {
-          title: "萤火",
-          desc: "一首描绘萤火虫的钢琴曲。",
-          idea: "通过轻柔的旋律和和声，表现萤火虫的美丽与神秘。",
-          cover: require('@/assets/img/云.jpg'),
-          audio: require('@/assets/music/029-萤火.mp3')
-        },
-        {
-          title: "花儿主题变奏曲",
-          desc: "一首描绘花儿的钢琴曲。",
-          idea: "通过轻柔的旋律和和声，表现花儿的美丽与神秘。",
-          cover: require('@/assets/img/云.jpg'),
-          audio: require('@/assets/music/012-花儿主题变奏曲.mp3')
-        },
+
+        //堡外就医
         {
           title: "堡外就医pv曲",
           desc: "一首描绘堡外就医的钢琴曲。",
           idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
           cover: require('@/assets/img/堡外就医 宣传图.png'),
           audio: require('@/assets/music/堡外就医/堡外就医pv曲.mp3')
+        },
+        {
+          title: "lucy的演奏",
+          desc: "一首描绘堡外就医的钢琴曲。",
+          idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/lucy的演奏.mp3')
         },
         {
           title: "lucy的演奏带和声",
@@ -132,6 +169,41 @@ export default {
           idea: "通过轻柔的旋律和和声，表现堡外就医的美丽与神秘。",
           cover: require('@/assets/img/堡外就医 宣传图.png'),
           audio: require('@/assets/music/堡外就医/被boss追杀.mp3')
+        },
+        {
+          title: "猎杀时刻bgm",
+          desc: "",
+          idea: "",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/猎杀时刻bgm.mp3')
+        },
+        {
+          title: "lyra网页",
+          desc: "",
+          idea: "",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/lyra网页.mp3')
+        },
+        {
+          title: "lyra网页-文本音效",
+          desc: "",
+          idea: "",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/lyra网页-文本音效.mp3')
+        },
+        {
+          title: "lyra网页-文本音效错误",
+          desc: "",
+          idea: "",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/lyra网页-文本音效错误.mp3')
+        },
+        {
+          title: "lyra网页-文本音效正确",
+          desc: "",
+          idea: "",
+          cover: require('@/assets/img/堡外就医 宣传图.png'),
+          audio: require('@/assets/music/堡外就医/lyra网页-文本音效正确.mp3')
         },
         {
           title: "背景的噪音",
@@ -150,6 +222,13 @@ export default {
 
 
         //节奏挑战
+        {
+          title: "新手教程",
+          desc: "level0",
+          idea: "level0",
+          cover: require('@/assets/img/节奏挑战cover.png'),
+          audio: require('@/assets/music/节奏挑战/开头曲子bpm90.mp3')
+        },
         {
           title: "level0",
           desc: "level0",
@@ -185,6 +264,17 @@ export default {
           cover: require('@/assets/img/节奏挑战cover.png'),
           audio: require('@/assets/music/节奏挑战/Project2-fever.mp3')
         },
+
+        //林西物语
+        {
+          title: "林西物语主题曲",
+          desc: "林西物语的主题曲",
+          idea: "因为林西物语描述了一年四季中",
+          // cover: require('@/assets/img/林西物语 宣传图.png'),
+          audio: require('@/assets/music/林西物语/044-冬之旅-2021-2-26.mp3')
+        },
+        
+        
 
         //免费领取
         {
