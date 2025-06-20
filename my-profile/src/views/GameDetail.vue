@@ -4,7 +4,7 @@
       <img :src="game.img[0]" alt="banner" class="banner-image" />
     </div>
     <h1>{{ game.title }}</h1>
-    <p>{{ game.info }}</p>
+    <p class="game-info-text">{{ game.info }}</p>
     <video v-if="game.video" controls>
       <source :src="game.video" type="video/mp4">
     </video>
@@ -128,5 +128,11 @@ h1 {
   height: 320px;
   object-fit: cover;
   display: block;
+}
+
+.game-info-text {
+  white-space: pre-wrap;
+  text-align: left;
+  color: #f0f0f0;
 }
 </style> 

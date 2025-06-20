@@ -29,14 +29,14 @@ const technologies = [
   {
     name: '帽子社官网',
     category: '官网',
-    description: '一款基于jquery+Express+less的网站，用于展示帽子社的各类作品。',
-    link: 'https://github.com/yourname/maozishe',
+    description: '一款基于jquery+Express+less的网站，用于社区的日常运营。web前端+后端+数据库',
+    link: 'https://github.com/klsdf/Hat-Soft.git',
   },
   {
     name: 'QQ机器人',
     category: 'QQ机器人',
     description: '一款基于nodejs的QQ机器人，用于管理用户电脑上的各种资源，并提供游戏化方案。比如用户某一个应用的使用时长，数据统计、截图。',
-    link: 'https://github.com/yourname/qqbot',
+    link: 'https://github.com/klsdf/ying-xue-bot.git',
   },
   {
     name: '后处理框架',

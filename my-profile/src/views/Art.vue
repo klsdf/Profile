@@ -16,10 +16,42 @@
 <script setup>
 const artworks = [
   {
-    image: 'https://placehold.co/400x300?text=作品1',
-    title: '数字插画《晨曦》',
-    description: '2023年创作，风格为写实主义，使用Procreate完成。',
+    image: require('@/assets/img/art/玛丽.png'),
+    title: '玛丽',
+    description: '。',
   },
+  {
+    image: require('@/assets/img/art/玛丽2.png'),
+    title: '玛丽2',
+    description: '。',
+  },
+  {
+    image: require('@/assets/img/art/王小桃.png'),
+    title: '王小桃',
+    description: '。',
+  },
+  {
+    image: require('@/assets/img/art/微笑教授.png'),
+    title: '微笑教授',
+    description: '。',
+  },
+  {
+    image: require('@/assets/img/art/小瞬.png'),
+    title: '小瞬',
+    description: '。',
+  },
+  {
+    image: require('@/assets/img/art/心奈.png'),
+    title: '心奈',
+    description: '。',
+  },
+  {
+    image: require('@/assets/img/art/萤雪.png'),
+    title: '萤雪',
+    description: '。',
+  },
+  
+  
 ];
 </script>
 
@@ -70,7 +102,7 @@ const artworks = [
 .art-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .art-title {
