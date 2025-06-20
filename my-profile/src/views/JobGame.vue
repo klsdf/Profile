@@ -28,7 +28,10 @@
           <div class="project-section" v-if="project.screenshots && project.screenshots.length">
             <h3 class="section-title">游戏截图</h3>
             <div class="screenshots-gallery">
-              <img v-for="(ss, sIndex) in project.screenshots" :key="sIndex" :src="ss" alt="Screenshot" class="screenshot-img" />
+              <div v-for="(ss, sIndex) in project.screenshots" :key="sIndex" class="screenshot-item">
+                <img :src="ss.src" alt="Screenshot" class="screenshot-img" />
+                <p class="screenshot-caption">{{ ss.caption }}</p>
+              </div>
             </div>
           </div>
           <div class="project-links" v-if="project.link">
@@ -44,10 +47,10 @@
 const projects = [
   {
     logo: 'https://placehold.co/80x80?text=Logo',
-    title: '项目A：星际远征',
+    title: '项目A：vistory',
     period: '2022.01 - 2023.05',
-    role: '主策划 / 系统设计师',
-    description: '一款科幻题材的SLG策略游戏，玩家扮演指挥官，探索宇宙、建立基地并与其他玩家联盟或对抗。',
+    role: '系统策划',
+    description: '一款基于AI。',
     contributions: [
       '负责游戏核心世界观和故事线设计。',
       '设计了游戏的资源采集、科技树和单位成长系统。',
@@ -55,9 +58,9 @@ const projects = [
       '撰写了超过80%的游戏内剧情和任务文案。',
     ],
     screenshots: [
-      'https://placehold.co/400x225?text=战斗画面',
-      'https://placehold.co/400x225?text=基地建设',
-      'https://placehold.co/400x225?text=星图探索',
+      { src: 'https://placehold.co/400x225?text=战斗画面', caption: '核心战斗场景' },
+      { src: 'https://placehold.co/400x225?text=基地建设', caption: '基地建设与升级' },
+      { src: 'https://placehold.co/400x225?text=星图探索', caption: '广阔的星图探索' },
     ],
     link: 'https://example.com/project-a',
   },
@@ -73,9 +76,9 @@ const projects = [
       '参与了Boss战"森林守护者"的机制设计与实现。',
     ],
     screenshots: [
-      'https://placehold.co/400x225?text=角色选择',
-      'https://placehold.co/400x225?text=解谜场景',
-      'https://placehold.co/400x225?text=Boss战',
+      { src: 'https://placehold.co/400x225?text=角色选择', caption: '多样的角色选择' },
+      { src: 'https://placehold.co/400x225?text=解谜场景', caption: '精巧的关卡解谜' },
+      { src: 'https://placehold.co/400x225?text=Boss战', caption: '紧张刺激的Boss战' },
     ],
     link: '',
   },
@@ -187,8 +190,16 @@ const projects = [
   gap: 12px;
 }
 
-.screenshot-img {
+.screenshot-item {
   width: calc(33.333% - 8px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.screenshot-img {
+  width: 100%;
   border-radius: 8px;
   object-fit: cover;
   transition: transform 0.3s ease;
@@ -196,6 +207,12 @@ const projects = [
 
 .screenshot-img:hover {
   transform: scale(1.05);
+}
+
+.screenshot-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
 }
 
 .project-links {

@@ -1,6 +1,6 @@
 <template>
   <router-link to="/" class="home-btn">
-    🎵 游戏作品集
+    🎵 独立游戏作品集
   </router-link>
   <router-link to="/job-game" class="job-game-btn">
     🎵 商业游戏项目经验
