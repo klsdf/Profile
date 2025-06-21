@@ -112,18 +112,29 @@ const projects = [
       {
         src: require('@/assets/vistory2d/videos/深海demo.mp4'),
         // poster: 'https://placehold.co/400x225?text=Demo+Video',
-        caption: '模块Demo演示'
+        caption: '深海Demo演示'
       },
       {
         src: require('@/assets/vistory2d/videos/太空demo.mp4'),
         // poster: 'https://placehold.co/400x225?text=Demo+Video',
-        caption: '模块Demo演示'
+        caption: '太空Demo演示'
       },
       {
-        src: require('@/assets/vistory2d/videos/太空demo.mp4'),
+        src: require('@/assets/vistory2d/videos/文字demo.mp4'),
         // poster: 'https://placehold.co/400x225?text=Demo+Video',
-        caption: '模块Demo演示'
+        caption: '自定义关卡演示'
       },
+      {
+        src: require('@/assets/vistory2d/videos/画线组件1.mp4'),
+        // poster: 'https://placehold.co/400x225?text=Demo+Video',
+        caption: '实体线条功能，玩家绘制的线条带有碰撞'
+      },
+      {
+        src: require('@/assets/vistory2d/videos/画线组件2.mp4'),
+        // poster: 'https://placehold.co/400x225?text=Demo+Video',
+        caption: '神笔马良功能，绘制的物体如果像人，那么会自动添加AI组件'
+      },
+      
       
       
 
@@ -237,7 +248,7 @@ const projects = [
     title: '项目F：圈圈圆圆圈圈',
     period: '2021.07 - 2021.12',
     role: '程序',
-    description: `幸运房东like游戏。
+    description: `《幸运房东》like游戏。
   玩家需要抽卡并调整卡牌位置，使得卡牌的彼此之间连携，产生收益。
     `,
     contributions: [
