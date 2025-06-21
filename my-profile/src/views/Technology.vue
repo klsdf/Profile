@@ -60,6 +60,14 @@ const technologies = [
     category: '游戏设计节点图',
     description: '一款基于原生js的GameDesignNodeGraph，系统描述并阐释了游戏设计的各种结构，并用节点图的形式快速帮设计师生成一篇游戏策划文档。',
     link: 'https://github.com/klsdf/GameDesignNodeGraph.git',
+  },
+  {
+    name: 'JapenesLearnVideoMaker',
+    category: '日语学习视频制作',
+    description: `一款基于Python+GPT Sovit的日语学习视频制作工具，用于制作日语学习视频。可以把日语学习笔记自动化且批量制作成视频。
+用户只需要输入想要复习的内容，ai会自动生成学习资料以及语音。
+    `,
+    link: 'https://github.com/klsdf/JapenesLearnVideoMaker.git',
   }
 ];
 </script>

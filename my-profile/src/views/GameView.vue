@@ -217,11 +217,11 @@ AI的困境
         {
           title: '林西物语',
           img: [require('@/assets/林西物语/imgs/1.png')],
-          info: '游戏简介',
+          info: '一款传统的roguelike+小队建设RPG游戏',
           video: '',
           link: '',
           rulesInfo: '',
-          tag: ['抽卡', '超现实主义', '艺术']
+          tag: ['roguelike', '多周目', 'RPG']
         },
         {
           title: '宿醉阿弥陀佛',
