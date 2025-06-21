@@ -48,9 +48,9 @@ nav {
   padding: 30px;
 }
 
-nav a {
+a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 nav a.router-link-exact-active {

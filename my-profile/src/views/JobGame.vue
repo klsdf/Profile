@@ -25,6 +25,23 @@
               <li v-for="(contribution, cIndex) in project.contributions" :key="cIndex">{{ contribution }}</li>
             </ul>
           </div>
+          <div class="project-section" v-if="project.videos && project.videos.length">
+            <h3 class="section-title">游戏视频演示</h3>
+            <div class="videos-gallery">
+              <div v-for="(video, vIndex) in project.videos" :key="vIndex" class="video-item">
+                <video 
+                  :src="video.src" 
+                  :poster="video.poster" 
+                  controls 
+                  class="demo-video"
+                  preload="metadata"
+                >
+                  您的浏览器不支持视频播放
+                </video>
+                <p class="video-caption">{{ video.caption }}</p>
+              </div>
+            </div>
+          </div>
           <div class="project-section" v-if="project.screenshots && project.screenshots.length">
             <h3 class="section-title">游戏截图</h3>
             <div class="screenshots-gallery">
@@ -45,35 +62,71 @@
 
 <script setup>
 const projects = [
+  //#region vistory
   {
     logo: 'https://placehold.co/80x80?text=Logo',
     title: '项目A：vistory',
     period: '2022.01 - 2023.05',
     role: '系统策划',
-    description: '一款基于AI。',
+    description: '一款基于AI的叙事向RPG游戏。',
     contributions: [
-      '负责游戏核心世界观和故事线设计。',
-      '设计了游戏的资源采集、科技树和单位成长系统。',
-      '主导了战斗平衡性调整，并根据测试数据迭代了超过5个版本。',
-      '撰写了超过80%的游戏内剧情和任务文案。',
+      '负责设计游戏系统，包括路线系统、节点设计等',
+      '负责配置游戏数值，确保关卡的体验符合"起承转合"的节奏',
+    ],
+    videos: [
+
     ],
     screenshots: [
-      { src: 'https://placehold.co/400x225?text=战斗画面', caption: '核心战斗场景' },
-      { src: 'https://placehold.co/400x225?text=基地建设', caption: '基地建设与升级' },
-      { src: 'https://placehold.co/400x225?text=星图探索', caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图1.png'), caption: '核心战斗场景' },
+      { src: require('@/assets/vistory/截图2.jpg'), caption: '基地建设与升级' },
+      { src: require('@/assets/vistory/截图3.jpg'), caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图4.jpg'), caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图5.jpg'), caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图6.jpg'), caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图7.jpg'), caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图8.jpg'), caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图9.jpg'), caption: '广阔的星图探索' },
+      { src: require('@/assets/vistory/截图10.png'), caption: '广阔的星图探索' },
     ],
     link: 'https://example.com/project-a',
   },
+  //#endregion
+  //#region vistory2d
   {
     logo: 'https://placehold.co/80x80?text=Logo',
-    title: '项目B：幻境之森',
+    title: '项目B：Vistory2',
     period: '2021.07 - 2021.12',
-    role: '关卡设计师',
-    description: '一款二次元风格的平台跳跃解谜游戏，以其独特的艺术风格和富有挑战性的关卡设计著称。',
+    role: '系统策划/技术策划',
+    description: `一款基于AI的家园建设+熟人社交+UGC游戏。
+- 玩家可以在游戏内输入任意自己想要的兼具/建筑。AI会根据玩家的需求生成对应的建筑/家具。
+- 玩家可以制造AI的小伙伴，可以是猫猫也可以是自己的虚拟伴侣。
+- 玩家可以邀请好友来自己的家园做客，也可以邀请好友来自己的家园做客。
+- 玩家可以使用游戏内内置的UGC工具，来自己编写逻辑，把自己的房间变成一个有趣的游戏。`,
+
     contributions: [
-      '独立设计了游戏第三章"迷雾森林"的全部10个关卡。',
-      '制作了关卡中的动态障碍和触发事件的原型。',
-      '参与了Boss战"森林守护者"的机制设计与实现。',
+      '负责设计游戏中的各个组件,包括：画线组件、多媒体组件、AI NPC智能体组件、全局灯光组件等',
+      '负责配置游戏数值，确保游戏体验符合"起承转合"的节奏',
+      '负责游戏模块的demo的制作与体验验证',
+    ],
+    videos: [
+      {
+        src: require('@/assets/vistory2d/videos/深海demo.mp4'),
+        // poster: 'https://placehold.co/400x225?text=Demo+Video',
+        caption: '模块Demo演示'
+      },
+      {
+        src: require('@/assets/vistory2d/videos/太空demo.mp4'),
+        // poster: 'https://placehold.co/400x225?text=Demo+Video',
+        caption: '模块Demo演示'
+      },
+      {
+        src: require('@/assets/vistory2d/videos/太空demo.mp4'),
+        // poster: 'https://placehold.co/400x225?text=Demo+Video',
+        caption: '模块Demo演示'
+      },
+      
+      
+
     ],
     screenshots: [
       { src: 'https://placehold.co/400x225?text=角色选择', caption: '多样的角色选择' },
@@ -82,7 +135,127 @@ const projects = [
     ],
     link: '',
   },
+  //#endregion
+  //#region ChatMaid
+  {
+    logo: 'https://placehold.co/80x80?text=Logo',
+    title: '项目C：ChatMaid',
+    period: '2021.07 - 2021.12',
+    role: '程序/AI产品经理',
+    description: `一款基于AI的家园建设+熟人社交+UGC游戏。
+    `,
+    contributions: [
+      '负责游戏中的AI模块的开发',
+      '负责游戏中的AI产品的规划与设计',
+    ],
+    screenshots: [
+      { src: require('@/assets/ChatMaid/imgs/截图1.jpg'), caption: 'AI产品演示' },
+      { src: require('@/assets/ChatMaid/imgs/截图2.jpg'), caption: 'AI产品演示' },
+      { src: require('@/assets/ChatMaid/imgs/截图3.jpg'), caption: 'AI产品演示' },
+    ],
+
+    videos: [
+      {
+        src: require('@/assets/ChatMaid/videos/录屏1.mp4'),
+        // poster: 'https://placehold.co/400x225?text=Demo+Video',
+        caption: 'AI产品演示'
+      },
+      {
+        src: require('@/assets/ChatMaid/videos/录屏2.mp4'),
+        // poster: 'https://placehold.co/400x225?text=Demo+Video',
+        caption: 'AI产品演示'
+      },
+    
+      
+      
+      
+    ]
+  },
+  //#endregion
+  //#region RhythmChallenge
+  {
+    logo: 'https://placehold.co/80x80?text=Logo',
+    title: '项目D：RhythmChallenge',
+    period: '2021.07 - 2021.12',
+    role: '关卡策划/作曲/编曲',
+    description: `RhythmGame。
+      - 玩家可以自由创作自己的音乐，并将其制作成RhythmGame。
+      - 玩家可以自由创作自己的音乐，并将其制作成RhythmGame。
+    `,
+    contributions: [
+      '负责游戏中的关卡设计',
+      '负责游戏中的作曲与编曲',
+    ],
+    screenshots: [
+      { src: require('@/assets/RhythmChallenge/imgs/截图1.jpg'), caption: '关卡设计' },
+      { src: require('@/assets/RhythmChallenge/imgs/截图2.jpg'), caption: '关卡设计' },
+      { src: require('@/assets/RhythmChallenge/imgs/截图3.jpg'), caption: '关卡设计' },
+    
+    ],
+    videos: [
+      
+    ]
+  },
+  //#endregion
+  //#region 堡外就医
+  {
+    logo: 'https://placehold.co/80x80?text=Logo',
+    title: '项目E：堡外就医',
+    period: '2021.07 - 2021.12',
+    role: '系统策划/程序/作曲/编曲',
+    description: `
+一款实验性叙事游戏，大量使用了ARG设计。
+玩家可以在真实的网页中探索，来完成游戏内的解密。
+    `,
+    contributions: [
+      '负责游戏中的系统设计',
+      '负责游戏中的程序开发',
+      '负责游戏中的作曲与编曲',
+    ],
+    screenshots: [
+      { src: require('@/assets/堡外就医/imgs/截图1.jpg'), caption: '关卡设计' },
+      { src: require('@/assets/堡外就医/imgs/截图2.jpg'), caption: '关卡设计' },
+      { src: require('@/assets/堡外就医/imgs/截图3.png'), caption: '关卡设计' },
+      { src: require('@/assets/堡外就医/imgs/截图4.png'), caption: '原型设计' },
+      { src: require('@/assets/堡外就医/imgs/截图5.jpg'), caption: '原型设计' },
+    ],
+    videos: [
+      {
+        src: require('@/assets/堡外就医/videos/录屏1.mp4'),
+        caption: '游戏演示'
+      },
+      {
+        src: require('@/assets/堡外就医/videos/录屏2.mp4'),
+      }
+      
+    ]
+  },
+  //#endregion
+  //#region 圈圈圆圆圈圈
+  {
+    logo: 'https://placehold.co/80x80?text=Logo',
+    title: '项目F：圈圈圆圆圈圈',
+    period: '2021.07 - 2021.12',
+    role: '程序',
+    description: `幸运房东like游戏。
+  玩家需要抽卡并调整卡牌位置，使得卡牌的彼此之间连携，产生收益。
+    `,
+    contributions: [
+      '负责游戏中的程序开发',
+    ],
+    screenshots: [
+      { src: require('@/assets/圈圈圆圆圈圈/imgs/截图1.jpg'), caption: '关卡设计' },
+
+    ],
+  },
+  //#endregion
+
 ];
+
+
+
+
+
 </script>
 
 <style scoped>
@@ -213,6 +386,37 @@ const projects = [
   font-size: 0.9rem;
   color: #555;
   margin: 0;
+}
+
+/* 新增：视频展示区域样式 */
+.videos-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.demo-video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  margin: 0 auto;
+}
+
+.video-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  font-weight: 500;
 }
 
 .project-links {
