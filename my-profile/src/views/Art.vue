@@ -80,13 +80,18 @@ const specialEffects = [
   },
   {
     video: require('@/assets/vistory2d/videos/全局灯光组件.mp4'),
-    title: '全局灯光系统',
+    title: 'ASCII后处理效果',
     description: '可动态调整的全局光照系统演示。'
   },
   {
     video: require('@/assets/vistory2d/videos/画线组件1.mp4'),
-    title: '实体画线功能',
-    description: '玩家绘制的线条将带有真实的物理碰撞。'
+    title: `马赛克化后处理效果`,
+    description: ''
+  },
+  {
+    video: require('@/assets/vistory2d/videos/画线组件1.mp4'),
+    title: `颜色映射`,
+    description: ''
   }
 ];
 </script>

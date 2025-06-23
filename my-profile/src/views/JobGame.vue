@@ -29,13 +29,7 @@
             <h3 class="section-title">游戏视频演示</h3>
             <div class="videos-gallery">
               <div v-for="(video, vIndex) in project.videos" :key="vIndex" class="video-item">
-                <video 
-                  :src="video.src" 
-                  :poster="video.poster" 
-                  controls 
-                  class="demo-video"
-                  preload="metadata"
-                >
+                <video :src="video.src" :poster="video.poster" controls class="demo-video" preload="metadata">
                   您的浏览器不支持视频播放
                 </video>
                 <p class="video-caption">{{ video.caption }}</p>
@@ -134,9 +128,6 @@ const projects = [
         // poster: 'https://placehold.co/400x225?text=Demo+Video',
         caption: '神笔马良功能，绘制的物体如果像人，那么会自动添加AI组件'
       },
-      
-      
-      
 
     ],
     screenshots: [
@@ -176,7 +167,7 @@ const projects = [
         // poster: 'https://placehold.co/400x225?text=Demo+Video',
         caption: 'AI产品演示'
       },
-  
+
     ]
   },
   //#endregion
@@ -198,10 +189,10 @@ const projects = [
       { src: require('@/assets/RhythmChallenge/imgs/截图1.jpg'), caption: '关卡设计' },
       { src: require('@/assets/RhythmChallenge/imgs/截图2.jpg'), caption: '关卡设计' },
       { src: require('@/assets/RhythmChallenge/imgs/截图3.jpg'), caption: '关卡设计' },
-    
+
     ],
     videos: [
-      
+
     ]
   },
   //#endregion
@@ -234,8 +225,20 @@ const projects = [
       },
       {
         src: require('@/assets/堡外就医/videos/录屏2.mp4'),
-      }
-      
+        caption: '游戏演示'
+      },
+      {
+        src: require('@/assets/堡外就医/videos/录屏3.mp4'),
+        caption: '游戏演示'
+      },
+      {
+        src: require('@/assets/堡外就医/videos/录屏4.mp4'),
+        caption: '游戏演示'
+      },
+      {
+        src: require('@/assets/堡外就医/videos/录屏5.mp4'),
+        caption: '游戏演示'
+      },
     ]
   },
   //#endregion
@@ -258,20 +261,28 @@ const projects = [
     ],
     videos: [
       {
+        src: require('@/assets/圈圈圆圆圈圈/videos/宣传片.mp4'),
+        caption: '宣传片'
+      },
+      {
         src: require('@/assets/圈圈圆圆圈圈/videos/v25-01-10.mp4'),
-        caption: '游戏演示'
+        caption: '游戏最早的原型'
       },
       {
         src: require('@/assets/圈圈圆圆圈圈/videos/v25-01-17.mp4'),
-        caption: '游戏演示'
+        caption: '确定了最基本的玩法，抽卡并摆放卡牌'
       },
       {
         src: require('@/assets/圈圈圆圆圈圈/videos/v25-01-21.mp4'),
-        caption: '游戏演示'
+        caption: '增加点击主城随机抽卡'
       },
       {
         src: require('@/assets/圈圈圆圆圈圈/videos/v25-02-11.mp4'),
-        caption: '游戏演示'
+        caption: '新增稀有度，快进等系统'
+      },
+      {
+        src: require('@/assets/圈圈圆圆圈圈/videos/v25-03-28.mp4'),
+        caption: '基本功能和早期美术迭代完毕'
       },
     ]
   },
@@ -360,9 +371,7 @@ const projects = [
   gap: 20px;
 }
 
-.project-section {
-
-}
+.project-section {}
 
 .section-title {
   font-size: 1.1rem;

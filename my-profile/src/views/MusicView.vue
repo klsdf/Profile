@@ -1,5 +1,9 @@
 <template>
   <div class="music-portfolio">
+    <div class="musician-cert-wrapper">
+      <img src="@/assets/网易云.png" alt="网易音乐人认证" class="musician-cert-img" />
+      <div>已获得网易音乐人、作曲家认证</div>
+    </div>
     <h1 class="title">音乐作品集</h1>
     <div class="music-list">
       <div class="music-card" v-for="(music, idx) in musics" :key="music.title">
@@ -11,8 +15,6 @@
 
           <!-- 播放控制区域 -->
           <div class="player-controls">
-         
-
             <!-- 原生音频控件 -->
             <audio ref="audio" :src="music.audio" @ended="onEnded(idx)" controls class="audio-player"></audio>
           </div>
@@ -273,9 +275,6 @@ export default {
           // cover: require('@/assets/img/林西物语 宣传图.png'),
           audio: require('@/assets/music/林西物语/044-冬之旅-2021-2-26.mp3')
         },
-        
-        
-
         //免费领取
         {
           title: "萤雪",
@@ -342,6 +341,18 @@ export default {
   background: #f8f8f8;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.musician-cert-wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.musician-cert-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
 .title {
