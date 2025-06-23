@@ -176,10 +176,7 @@ const projects = [
         // poster: 'https://placehold.co/400x225?text=Demo+Video',
         caption: 'AI产品演示'
       },
-    
-      
-      
-      
+  
     ]
   },
   //#endregion
@@ -256,8 +253,27 @@ const projects = [
     ],
     screenshots: [
       { src: require('@/assets/圈圈圆圆圈圈/imgs/截图1.jpg'), caption: '关卡设计' },
-
+      { src: require('@/assets/圈圈圆圆圈圈/imgs/截图2.jpg'), caption: '关卡设计' },
+      { src: require('@/assets/圈圈圆圆圈圈/imgs/截图3.jpg'), caption: '关卡设计' },
     ],
+    videos: [
+      {
+        src: require('@/assets/圈圈圆圆圈圈/videos/v25-01-10.mp4'),
+        caption: '游戏演示'
+      },
+      {
+        src: require('@/assets/圈圈圆圆圈圈/videos/v25-01-17.mp4'),
+        caption: '游戏演示'
+      },
+      {
+        src: require('@/assets/圈圈圆圆圈圈/videos/v25-01-21.mp4'),
+        caption: '游戏演示'
+      },
+      {
+        src: require('@/assets/圈圈圆圆圈圈/videos/v25-02-11.mp4'),
+        caption: '游戏演示'
+      },
+    ]
   },
   //#endregion
 
@@ -345,6 +361,7 @@ const projects = [
 }
 
 .project-section {
+
 }
 
 .section-title {
