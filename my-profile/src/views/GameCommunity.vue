@@ -43,7 +43,7 @@
 </template>
 
 <script setup>
-import communityLogo from '@/assets/logo.png';
+import communityLogo from '@/assets/帽子社/imgs/帽子社图标128.png';
 
 const overview = {
   desc: `“帽子社”是我于2022年在大学期间创办并持续运营的游戏社区，致力于创立一个可以研究游戏理论，交流游戏设计，分享游戏知识的社区平台。
@@ -53,33 +53,27 @@ const overview = {
 };
 
 const stats = [
-  { label: '注册用户', value: '35,000+' },
-  { label: '日活跃用户', value: '2,500+' },
-  { label: '累计发帖', value: '18,000+' },
-  { label: '举办线上活动', value: '40+' },
-  { label: '原创内容数', value: '5,000+' },
-  { label: '哔哩哔哩粉丝数', value: '8,000+' },
+  { label: '社区用户', value: '1000+' },
+  { label: '哔哩哔哩粉丝数', value: '1000+' },
 ];
 
 const featuredPosts = [
   {
-    title: '年度最佳攻略征集活动回顾',
-    author: '小明',
+    title: '游戏本体论研讨会',
+    author: '帽子社',
     date: '2023-12-10',
     desc: '本次活动共征集到200余篇高质量攻略，极大丰富了社区内容生态。',
+    link: 'https://www.bilibili.com/video/BV1Qy4y1C75N/?spm_id_from=333.337.search-card.all.click&vd_source=1783473789',
   },
   {
-    title: '社区成员原创同人画展',
-    author: '阿狸',
-    date: '2023-08-22',
-    desc: '展示了社区成员的优秀美术创作，促进了玩家间的艺术交流。',
+    title: 'AI NPC设计',
+    author: '帽子社',
+    date: '2023-12-10',
+    desc: '本次活动共征集到200余篇高质量攻略，极大丰富了社区内容生态。',
+    link: 'https://www.bilibili.com/video/BV1Qy4y1C75N/?spm_id_from=333.337.search-card.all.click&vd_source=1783473789',
   },
-  {
-    title: '“开发者面对面”线上访谈',
-    author: '官方团队',
-    date: '2023-05-15',
-    desc: '邀请知名游戏开发者与玩家互动，提升了社区专业影响力。',
-  },
+  
+  
 ];
 
 const achievements = [
