@@ -43,7 +43,7 @@
 </template>
 
 <script setup>
-import communityLogo from '@/assets/logo.png';
+import communityLogo from '@/assets/帽子社/imgs/帽子社图标128.png';
 
 const overview = {
   desc: `“帽子社”是我于2022年在大学期间创办并持续运营的游戏社区，致力于创立一个可以研究游戏理论，交流游戏设计，分享游戏知识的社区平台。

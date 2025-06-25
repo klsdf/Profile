@@ -8,7 +8,7 @@
     <video v-if="game.video" controls>
       <source :src="game.video" type="video/mp4">
     </video>
-    <a :href="game.link" target="_blank">下载链接</a>
+    <a :href="game.link" target="_blank">GitHub 链接</a>
     <div v-if="game.rulesInfo">
       <h4>游戏规则</h4>
       <p>{{ game.rulesInfo }}</p>

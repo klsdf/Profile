@@ -63,6 +63,11 @@ const artworks = [
     title: '萤雪',
     description: '。',
   },
+  {
+    image: require('@/assets/img/art/窗户和山.jpg'),
+    title: '窗户和山',
+    description: '。',
+  }
   
   
 ];
