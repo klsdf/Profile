@@ -8,7 +8,14 @@
     <video v-if="game.video" controls>
       <source :src="game.video" type="video/mp4">
     </video>
-    <a :href="game.link" target="_blank">GitHub 链接</a>
+    <div v-if="game.links && game.links.length" class="game-links">
+      <a v-for="(item, idx) in game.links" :key="idx" :href="item.url" class="game-link-btn" target="_blank">
+        <span v-if="item.type === 'GitHub'">GitHub 链接</span>
+        <span v-else-if="item.type === 'Itch'">Itch 页面</span>
+        <span v-else-if="item.type === '下载'">下载地址</span>
+        <span v-else>{{ item.type }}</span>
+      </a>
+    </div>
     <div v-if="game.rulesInfo">
       <h4>游戏规则</h4>
       <p>{{ game.rulesInfo }}</p>
@@ -134,5 +141,28 @@ h1 {
   white-space: pre-wrap;
   text-align: left;
   color: #f0f0f0;
+}
+
+.game-links {
+  margin: 18px 0 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.game-link-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(90deg, #4f8cff 0%, #6ee7b7 100%);
+  color: #fff;
+  border-radius: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.10);
+}
+.game-link-btn:hover {
+  background: linear-gradient(90deg, #346fd1 0%, #34d399 100%);
+  transform: translateY(-2px) scale(1.04);
 }
 </style> 
