@@ -96,12 +96,6 @@ const 还乡 = {
 
 
 
-
-
-
-
-
-
 的灵感来源于大家小时候在纸上自制的新棋。也就是围"围追堵截棋"和"围棋的胜率模式"
 所有棋子必须下在自己一个棋子的旁边，棋子会形成根和叶的关系，一旦根节点死亡，所有叶子节点死亡。棋子会消耗资源，需要让自己的棋子分化出资源节点。整体感受有点类似于围棋。占领的区域越大，就有更多的资源。只不过围棋是最后结算，而这个是每回合都会结算当前领地的资产。
 因为设计pvp的开发成本较高，暂时采用了pve的塔防设计。
@@ -134,13 +128,18 @@ const 山的那边 = {
 
 这是我制作的第一款游戏。
 恐怖解密游戏，带有一点meta要素
-和《迪亚特洛夫行动》有点类似，前期只是一个温馨的RPG游戏，玩家在游玩过程中会发现很多奇怪掉san的东西。最后玩家会发现自己实际上是在一个恐怖迷宫中，需要同时在2D游戏和3D游戏中寻找线索，并逃离出去。2D游戏和3D游戏的地图是通用的，在2D中如果发现一个坑跳不过去，可以在3D中跳过去（马里奥）。这样可以互相利用彼此的特点和信息差来补足。
+和《迪亚特洛夫行动》有点类似，前期只是一个温馨的RPG游戏，玩家在游玩过程中会发现很多奇怪掉san的东西。最后玩家会发现自己实际上是在一个恐怖迷宫中，需要同时在2D游戏和3D游戏中寻找线索，并逃离出去。2D游戏和3D游戏的地图是通用的，在2D中如果发现一个坑跳不过去，可以在3D中跳过去（马里奥）。
+这样可以互相利用彼此的特点和信息差来补足。
 使用RPGMakerMV制作。`,
     video: '',
     links: [
         { type: '下载', url: 'https://pan.baidu.com/s/19IgyKDiHFaP0Ius5re1wEQ?pwd=44pm' }
     ],
-    rulesInfo: '',
+    rulesInfo: `
+    玩家需要通过点击来和游戏中的物体进行交互。
+
+
+    `,
     tag: ['解密RPG', '多周目剧情']
 }
 
@@ -214,7 +213,7 @@ const 通感 =   {
 const 免费领取JavaScript学习资料 = 
 {
     title: '免费领取JavaScript学习资料',
-    enTitle: 'Free JavaScript Learning Materials',
+    enTitle: 'Get Free JavaScript Learning Materials',
     img: [
         require('@/assets/免费领取JavaScript学习资料/imgs/1.png'),
         require('@/assets/免费领取JavaScript学习资料/imgs/2.png'),
@@ -228,7 +227,8 @@ const 免费领取JavaScript学习资料 =
 并且本游戏具有反身性，可以在游戏内修改游戏的配置文件和代码，对这些代码的修改也会造成游戏剧情的改变。`,
     video: 'https://www.bilibili.com/video/BV1Tj411m7Mp/?spm_id_from=333.999.0.0',
     links: [
-        { type: '下载', url: 'https://pan.baidu.com/s/19IgyKDiHFaP0Ius5re1wEQ?pwd=44pm' }
+        { type: '下载', url: 'https://github.com/klsdf/Get-Free-JavaScript-Learning-Materials/releases/tag/%E6%AF%95%E8%AE%BE%E7%89%88%E6%9C%AC' },
+        { type: 'GitHub', url: 'https://github.com/klsdf/Get-Free-JavaScript-Learning-Materials' }
     ],
     rulesInfo: '本游戏主要想突破传统游戏的媒介，把游戏和玩家关系拓展到更广的维度。',
     tag: ['限时人物养成', 'metagame', 'ARG']
@@ -299,13 +299,16 @@ const 气泡迷因 =  {
     info: `
 《气泡迷因》是一款叙事向解密游戏。玩家需要在游戏中寻找那些东西是可以被"气泡化"的。
 本游戏在解密的部分采用了基于状态的推理，部分解决了传统点击解密的困局，玩家的每一次点击都在学习信息，而不是进入全新的状态。
-例如第一次点击，玩家知道了圆形的是可以点击的，就会立刻告诉玩家下一步需要点击脸。点击了脸之后，又告诉玩家需要点击头。之后的谜题越来越抽象，但是玩家的逻辑仍然非常清晰。因为这个机制相当于在解密的过程中直接嵌入了思维链。而不是像传统解密游戏那样，单纯给一个瓶子，让玩家猜测这个瓶子可以干什么。每一个谜题都需要重新思考。`,
-    video: '【实验游戏《气泡迷因—欢迎来到符号界》 2025GlobalGamejam得奖作品】 https://www.bilibili.com/video/BV1UMwWekEPW/?share_source=copy_web&vd_source=7de8c277f16e8e03b48a5328dddfe2ce',
+例如第一次点击，玩家知道了圆形的是可以点击的，就会立刻告诉玩家下一步需要点击脸。点击了脸之后，又告诉玩家需要点击头。之后的谜题越来越抽象，但是玩家的逻辑仍然非常清晰。因为这个机制相当于在解密的过程中直接嵌入了思维链。而不是像传统解密游戏那样，单纯给一个瓶子，让玩家猜测这个瓶子可以干什么。
+每一个谜题都需要重新思考。`,
+    video:    `   
+    `,
     links: [
 
-
-    ],
-    rulesInfo: '',
+  ],
+    rulesInfo: `
+玩家需要在游戏中于各个物体进行交互，不断将迷因的范围扩大。
+    `,
     tag: ['迷因', '超现实主义', '艺术']
 }
 
@@ -363,7 +366,9 @@ const 宿醉阿弥陀佛 =  {
 3. 一段时间内没有碰到障碍物，可以进入fever模式，在fever模式下，全屏幕短时间内会出现大量的酒。此时，需要玩家疯狂晃动手柄和左摇杆，来尽可能收集更多的酒。          
 `,
     video: '',
-    links: [],
+    links: [
+        { type: 'GitHub', url: 'https://github.com/klsdf/God-IS-Drunk.git' }
+    ],
     rulesInfo: '',
     tag: ['拼贴艺术', '3D东方', '虚无主义']
 }
