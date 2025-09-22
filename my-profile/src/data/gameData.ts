@@ -373,7 +373,7 @@ const 林西物语 =    {
 const 宿醉阿弥陀佛 =  {
     title: '宿醉阿弥陀佛',
     enTitle: 'Drunken Amitabha',
-    img: [],
+    img: [require('@/assets/宿醉阿弥陀佛/imgs/1.jpg')],
     info: `世界毁灭了
 
 规则：
