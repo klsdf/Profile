@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG 风格简历</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2b2b2b;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .header {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            background-color: #3b3b3b;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-bottom: 3px solid #4caf50;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #4caf50;
+            margin-right: 20px;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .attributes {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .attribute {
+            margin: 5px 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4b4b4b;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            width: 100%;
+        }
+        .skill {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="avatar">
+                <img src="avatar.jpg" alt="Avatar">
+            </div>
+            <div class="attributes">
+                <div class="attribute">姓名: 张三</div>
+                <div class="attribute">年龄: 30</div>
+                <div class="attribute">职业: 软件工程师</div>
+                <div class="attribute">位置: 北京, 中国</div>
+                <div class="attribute">经验值: 10年</div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Docker</div>
+            <div class="skill">团队合作</div>
+            <div class="skill">解决问题</div>
+        </div>
+    </div>
+</body>
+</html>

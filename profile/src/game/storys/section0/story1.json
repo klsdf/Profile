@@ -1,0 +1,17 @@
+[
+    {
+        "content": "您好啊。"
+    },
+    {
+        "content": "今天您也来学习了吗",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "淑女笑1"
+        },
+        "gameEvent":{
+            "eventName":"储存进度",
+            "parameters":[0,1]
+        }
+    } 
+]

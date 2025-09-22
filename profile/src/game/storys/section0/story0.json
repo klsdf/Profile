@@ -1,0 +1,104 @@
+[
+    {
+        "content": "啊呀，您来了呢。",
+        "gameEvent":{
+            "eventName":"获得成就",
+            "parameters":["梦的开始","第一次打开拓展"]
+        }
+    },
+    {
+        "content": "怎末您很惊讶吗？。",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "坏笑"
+        }
+    },
+    {
+        "content": "没想到我居然也有立绘吧！",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "坏笑"
+        }
+    },
+    {
+        "content": "不过话说回来，我们这些程序实际上对这些<strong>立绘</strong>什么的也不是很敏感啦",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "淑女笑1"
+        }
+    },
+    {
+        "content": "毕竟我们是二维生物",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "淑女笑2"
+        }
+    },
+    {
+        "content": "能看到的最多也就是这些立绘的信息而已",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "淑女笑2"
+        }
+    },
+    {
+        "content": "好啦，话题扯远了",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "淑女笑2"
+        }
+    },
+    {
+        "content": "您现在看到的就是这个拓展的界面啦",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "正常",
+            "expressionType": "正常"
+        }
+    },
+    {
+        "content": "这个浏览器拓展叫做<mark>萤雪</mark>，也就是我的名字啦",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "收到2"
+        }
+    },
+    {
+        "content": "这个浏览器拓展叫做<mark>萤雪</mark>，也就是我的名字啦"
+    },
+    {
+        "content": "一般来说，我们都会以自己的名字来命名自己管理的程序",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "指点江山"
+        }
+    },
+    {
+        "content": "不过这个也没有强制要求啦，都是个人习惯啦~",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "淑女笑2"
+        }
+    },
+    {
+        "content": "言归正传啦，在今后的学习生活中请多多指教哦~~",
+        "tachie": {
+            "character": "萤雪",
+            "expression": "开心",
+            "expressionType": "淑女笑1"
+        },
+        "gameEvent":{
+            "eventName":"储存进度",
+            "parameters":[0,1]
+        }
+    } 
+]
