@@ -1,6 +1,6 @@
 <template>
   <div class="article-view">
-    <h1 class="page-title">我的游戏研究论文</h1>
+    <h1 class="page-title">{{ $t('article.myPapers') }}</h1>
     <div v-for="(paper, index) in papers" :key="index" class="paper-item">
       <h2 class="paper-title">{{ paper.title }}</h2>
       <p class="paper-abstract">{{ paper.abstract }}</p>
@@ -12,7 +12,7 @@
         rel="noopener"
         :download="getFileName(paper.link)"
       >
-        点击下载文档
+        {{ $t('article.clickDownload') }}
       </a>
     </div>
   </div>

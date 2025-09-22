@@ -1,6 +1,6 @@
 <template>
   <div class="job-game-view">
-    <h1 class="page-title">商业游戏项目经验</h1>
+    <h1 class="page-title">{{ $t('jobGame.title') }}</h1>
     <div class="project-list">
       <div v-for="(project, index) in projects" :key="index" class="project-card">
         <div class="project-header">
@@ -12,21 +12,21 @@
         </div>
         <div class="project-body">
           <div class="project-section">
-            <h3 class="section-title">我的角色</h3>
+            <h3 class="section-title">{{ $t('jobGame.myRole') }}</h3>
             <p>{{ project.role }}</p>
           </div>
           <div class="project-section">
-            <h3 class="section-title">项目简介</h3>
+            <h3 class="section-title">{{ $t('jobGame.projectIntro') }}</h3>
             <p>{{ project.description }}</p>
           </div>
           <div class="project-section">
-            <h3 class="section-title">我的贡献</h3>
+            <h3 class="section-title">{{ $t('jobGame.myContribution') }}</h3>
             <ul>
               <li v-for="(contribution, cIndex) in project.contributions" :key="cIndex">{{ contribution }}</li>
             </ul>
           </div>
           <div class="project-section" v-if="project.videos && project.videos.length">
-            <h3 class="section-title">游戏视频演示</h3>
+            <h3 class="section-title">{{ $t('jobGame.gameVideoDemo') }}</h3>
             <div class="videos-gallery">
               <div v-for="(video, vIndex) in project.videos" :key="vIndex" class="video-item">
                 <video :src="video.src" :poster="video.poster" controls class="demo-video" preload="metadata">

@@ -10,7 +10,7 @@
         <h1 class="profile-name">{{ profile.name }}</h1>
         <div class="profile-title">{{ profile.title }}</div>
         <div class="profile-section">
-          <div class="section-label">学历：</div>
+          <div class="section-label">{{ $t('profile.educationLabel') }}</div>
           <div class="section-content">
             <div v-for="(edu, idx) in educations" :key="idx">
               <strong>{{ edu.school }}</strong>（{{ edu.period }}）<br />
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div class="profile-section">
-          <div class="section-label">工作经历：</div>
+          <div class="section-label">{{ $t('profile.workExperience') }}</div>
           <div class="section-content">
             <div v-for="(job, idx) in jobs" :key="idx">
               <strong>{{ job.company }}</strong>（{{ job.period }}）<br />
@@ -30,7 +30,7 @@
           </div>
         </div>
         <div class="profile-section">
-          <div class="section-label">成就：</div>
+          <div class="section-label">{{ $t('profile.achievementsLabel') }}</div>
           <ul class="section-content achievements">
             <li v-for="(ach, idx) in achievements" :key="idx">{{ ach }}</li>
           </ul>
@@ -39,7 +39,7 @@
     </div>
     <!-- 下方能力表 -->
     <div class="profile-abilities">
-      <h2 class="abilities-title">能力值</h2>
+      <h2 class="abilities-title">{{ $t('profile.abilitiesTitle') }}</h2>
       <div v-for="(ability, idx) in abilities" :key="idx" class="ability-row">
         <span class="ability-label">{{ ability.name }}</span>
         <div class="ability-bar-bg">
@@ -50,7 +50,7 @@
     </div>
     <!-- 在能力表下方新增成就面板 -->
     <div class="profile-achievement-panel">
-      <h2 class="achievement-title">人生成就面板</h2>
+      <h2 class="achievement-title">{{ $t('profile.lifeAchievements') }}</h2>
       <div class="achievement-list">
         <div v-for="(ach, idx) in achievementsPanel" :key="idx" :class="['achievement-card', ach.done ? 'done' : '']">
           <img :src="ach.icon" alt="icon" class="achievement-icon" />

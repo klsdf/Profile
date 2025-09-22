@@ -1,9 +1,9 @@
 <template>
   <div class="community-view">
-    <h1 class="page-title">我的游戏社区运营成果</h1>
+    <h1 class="page-title">{{ $t('community.title') }}</h1>
     <!-- 社区概览区 -->
     <section class="overview-section">
-      <h2 class="section-title">社区概览</h2>
+      <h2 class="section-title">{{ $t('community.overview') }}</h2>
       <div class="overview-content">
         <img :src="communityLogo" alt="社区 Logo" class="community-logo" />
         <p class="overview-desc">{{ overview.desc }}</p>
@@ -11,7 +11,7 @@
     </section>
     <!-- 成果数据区 -->
     <section class="stats-section">
-      <h2 class="section-title">核心数据</h2>
+      <h2 class="section-title">{{ $t('community.coreData') }}</h2>
       <div class="stats-list">
         <div v-for="(stat, idx) in stats" :key="idx" class="stat-card">
           <div class="stat-value">{{ stat.value }}</div>
@@ -21,7 +21,7 @@
     </section>
     <!-- 精选内容区 -->
     <section class="featured-section">
-      <h2 class="section-title">精选内容</h2>
+      <h2 class="section-title">{{ $t('community.featuredContent') }}</h2>
       <div class="featured-list">
         <div v-for="(post, idx) in featuredPosts" :key="idx" class="featured-card">
           <div class="featured-title">{{ post.title }}</div>

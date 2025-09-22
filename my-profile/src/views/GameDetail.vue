@@ -3,25 +3,25 @@
     <div v-if="game.img && game.img.length" class="banner">
       <img :src="game.img[0]" alt="banner" class="banner-image" />
     </div>
-    <h1>{{ game.title }}</h1>
-    <p class="game-info-text">{{ game.info }}</p>
+    <h1>{{ localizedGame.title }}</h1>
+    <p class="game-info-text">{{ localizedGame.info }}</p>
     <video v-if="game.video" controls>
       <source :src="game.video" type="video/mp4">
     </video>
     <div v-if="game.links && game.links.length" class="game-links">
       <a v-for="(item, idx) in game.links" :key="idx" :href="item.url" class="game-link-btn" target="_blank">
-        <span v-if="item.type === 'GitHub'">GitHub 链接</span>
-        <span v-else-if="item.type === 'Itch'">Itch 页面</span>
-        <span v-else-if="item.type === '下载'">下载地址</span>
+        <span v-if="item.type === 'GitHub'">{{ $t('game.githubLink') }}</span>
+        <span v-else-if="item.type === 'Itch'">{{ $t('game.itchPage') }}</span>
+        <span v-else-if="item.type === '下载'">{{ $t('game.downloadAddress') }}</span>
         <span v-else>{{ item.type }}</span>
       </a>
     </div>
-    <div v-if="game.rulesInfo">
-      <h4>游戏规则</h4>
-      <p>{{ game.rulesInfo }}</p>
+    <div v-if="localizedGame.rulesInfo">
+      <h4>{{ $t('game.gameRules') }}</h4>
+      <p>{{ localizedGame.rulesInfo }}</p>
     </div>
     <div class="tags">
-      <span v-for="tag in game.tag" :key="tag" class="tag">{{ tag }}</span>
+      <span v-for="tag in localizedGame.tag" :key="tag" class="tag">{{ tag }}</span>
     </div>
     <div class="game-images" v-if="game.img && game.img.length > 1">
       <img
@@ -34,12 +34,13 @@
     </div>
   </div>
   <div v-else>
-    <p>游戏信息未找到。</p>
+    <p>{{ $t('game.gameNotFound') }}</p>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 import SwiperClass, { Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
@@ -53,7 +54,29 @@ export default defineComponent({
     SwiperSlide
   },
   setup() {
+    const { tm } = useI18n();
     const game = JSON.parse(localStorage.getItem('selectedGame') || '{}');
+    
+    const localizedGame = computed(() => {
+      if (!game.title) return {};
+      
+      // 获取翻译数据
+      const gameTranslations = tm('games');
+      const gameKey = game.title;
+      
+      if (gameTranslations && gameTranslations[gameKey]) {
+        return {
+          ...game,
+          title: gameTranslations[gameKey].title,
+          info: gameTranslations[gameKey].info,
+          rulesInfo: gameTranslations[gameKey].rulesInfo,
+          tag: gameTranslations[gameKey].tag
+        };
+      }
+      
+      return game;
+    });
+    
     const swiperOptions = {
       autoplay: {
         delay: 1000,
@@ -66,7 +89,7 @@ export default defineComponent({
       },
       modules: [Pagination],
     };
-    return { game, swiperOptions };
+    return { game, localizedGame, swiperOptions };
   }
 });
 </script>

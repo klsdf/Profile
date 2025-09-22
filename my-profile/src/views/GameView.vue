@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import GameCard from '@/components/GameCard.vue';
 import { gameData } from '@/data/gameData'; // 引入游戏数据
 
@@ -17,13 +19,37 @@ export default {
   components: {
     GameCard
   },
+  setup() {
+    const { tm } = useI18n();
+    
+    const localizedGames = computed(() => {
+      const gameTranslations = tm('games');
+      return gameData.map(game => {
+        const gameKey = game.title;
+        if (gameTranslations && gameTranslations[gameKey]) {
+          return {
+            ...game,
+            title: gameTranslations[gameKey].title,
+            info: gameTranslations[gameKey].info,
+            rulesInfo: gameTranslations[gameKey].rulesInfo,
+            tag: gameTranslations[gameKey].tag
+          };
+        }
+        return game;
+      });
+    });
+    
+    return {
+      games: localizedGames
+    };
+  },
   /**
    * 组件数据
    * @returns {Object} 包含游戏数据的对象
    */
   data() {
     return {
-      games: gameData
+      // games: gameData // 移除这行，因为现在使用computed
     };
   },
   mounted() {
