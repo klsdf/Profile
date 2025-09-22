@@ -2,16 +2,16 @@
   <div class="music-portfolio">
     <div class="musician-cert-wrapper">
       <img src="@/assets/网易云.png" alt="网易音乐人认证" class="musician-cert-img" />
-      <div>已获得网易音乐人、作曲家认证</div>
+      <div>{{ $t('pages.musicianCert') }}</div>
     </div>
-    <h1 class="title">音乐作品集</h1>
+    <h1 class="title">{{ $t('pages.musicPortfolio') }}</h1>
     <div class="music-list">
       <div class="music-card" v-for="(music, idx) in musics" :key="music.title">
         <img v-if="music.cover" :src="music.cover" class="cover" alt="cover" />
         <div class="info">
           <h2>{{ music.title }}</h2>
           <p class="desc">{{ music.desc }}</p>
-          <p class="idea"><strong>创作思路：</strong>{{ music.idea }}</p>
+          <p class="idea"><strong>{{ $t('music.creativeIdea') }}</strong>{{ music.idea }}</p>
 
           <!-- 播放控制区域 -->
           <div class="player-controls">

@@ -1,30 +1,37 @@
 <template>
-  <router-link to="/" class="home-btn">
-    🎵 独立游戏作品集
-  </router-link>
-  <router-link to="/job-game" class="job-game-btn">
-    🎵 商业游戏项目经验
-  </router-link>
-  <router-link to="/music" class="music-btn">
-    🎵 音乐作品集
-  </router-link>
-  <router-link to="/art" class="art-btn">
-    🎵 美术作品集
-  </router-link>
-  <router-link to="/article" class="article-btn">
-    🎵 游戏研究论文
-  </router-link>
-  <router-link to="/technology" class="technology-btn">
-    🎵 技术作品集
-  </router-link>
-  <router-link to="/game-community" class="game-community-btn">
-    🎵 游戏社区运营
-  </router-link>
-  <router-link to="/profile" class="profile-btn">
-    🎵 个人简历
-  </router-link>
+  <LanguageSwitcher />
+  <nav>
+    <router-link to="/" class="home-btn">
+      {{ $t('nav.home') }}
+    </router-link>
+    <router-link to="/job-game" class="job-game-btn">
+      {{ $t('nav.jobGame') }}
+    </router-link>
+    <router-link to="/music" class="music-btn">
+      {{ $t('nav.music') }}
+    </router-link>
+    <router-link to="/art" class="art-btn">
+      {{ $t('nav.art') }}
+    </router-link>
+    <router-link to="/article" class="article-btn">
+      {{ $t('nav.article') }}
+    </router-link>
+    <router-link to="/technology" class="technology-btn">
+      {{ $t('nav.technology') }}
+    </router-link>
+    <router-link to="/game-community" class="game-community-btn">
+      {{ $t('nav.gameCommunity') }}
+    </router-link>
+    <router-link to="/profile" class="profile-btn">
+      {{ $t('nav.profile') }}
+    </router-link>
+  </nav>
   <router-view />
 </template>
+
+<script setup lang="ts">
+import LanguageSwitcher from './components/LanguageSwitcher.vue'
+</script>
 
 <style>
 #app {

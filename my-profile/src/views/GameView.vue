@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="center-text">游戏作品集<br>作者：闫辰祥</div>
+    <div class="center-text">{{ $t('pages.gamePortfolio') }}<br>{{ $t('pages.author') }}</div>
     <div class="card-container">
       <GameCard v-for="(game, index) in games" :key="game.title" :game="game" :style="getCardStyle(index)"
         class="game-card" />

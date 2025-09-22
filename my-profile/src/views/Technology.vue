@@ -1,13 +1,13 @@
 <template>
   <div class="technology-view">
-    <h1 class="page-title">我的技术栈</h1>
+    <h1 class="page-title">{{ $t('technology.techStack') }}</h1>
     <div v-for="(tech, index) in technologies" :key="index" class="tech-item">
       <div class="tech-header">
         <span class="tech-name">{{ tech.name }}</span>
         <span class="tech-category">{{ tech.category }}</span>
       </div>
       <p class="tech-description">{{ tech.description }}</p>
-      <a v-if="tech.link" :href="tech.link" class="tech-link" target="_blank" rel="noopener">访问仓库</a>
+      <a v-if="tech.link" :href="tech.link" class="tech-link" target="_blank" rel="noopener">{{ $t('technology.visitRepo') }}</a>
     </div>
   </div>
 </template>

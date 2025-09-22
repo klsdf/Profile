@@ -1,8 +1,8 @@
 <template>
   <div class="art-view">
-    <h1 class="page-title">美术与特效作品集</h1>
+    <h1 class="page-title">{{ $t('art.portfolio') }}</h1>
 
-    <h2 class="section-heading">美术作品</h2>
+    <h2 class="section-heading">{{ $t('art.artworks') }}</h2>
     <div class="art-gallery">
       <div v-for="(art, index) in artworks" :key="index" class="art-item">
         <div class="art-image-wrapper">
@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <h2 class="section-heading">特效作品</h2>
+    <h2 class="section-heading">{{ $t('art.effects') }}</h2>
     <div class="effects-gallery">
       <div v-for="(effect, index) in specialEffects" :key="index" class="effect-item">
         <div class="effect-video-wrapper">
