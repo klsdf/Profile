@@ -148,7 +148,12 @@ const 山的那边 = {
 const 文芒 =  {
     title: '文芒',
     enTitle: 'WenMang',
-    img: [require('@/assets/文芒/imgs/1.png')],
+    img: [
+        require('@/assets/文芒/imgs/1.png'),
+        require('@/assets/文芒/imgs/2.png'),
+        require('@/assets/文芒/imgs/3.png'),
+        require('@/assets/文芒/imgs/4.png'),
+    ],
     info: 'ADV文字解密类游戏',
     video: require('@/assets/文芒/video/文芒.mp4'),
     links: [
